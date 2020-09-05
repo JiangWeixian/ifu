@@ -4,17 +4,25 @@
   "description": "translate cRonstrue",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava",
+    "build": "tsc",
+    "postinstall": "alfy-init"
   },
   "keywords": [
     "alfred"
   ],
+  "engines": {
+    "node": ">=8"
+  },
   "author": "JiangWeixian",
   "license": "MIT",
   "dependencies": {
-    "alfy": "^0.10.0"
+    "alfy": "^0.10.0",
+    "cronstrue": "^1.100.0"
   },
   "devDependencies": {
+    "alfy-test": "^0.4.0",
+    "ava": "^3.12.1",
     "typescript": "^4.0.2"
   }
 }
