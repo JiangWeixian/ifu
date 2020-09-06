@@ -8,7 +8,7 @@ alfy.output([
   {
     title: item,
     icon: {
-      path: ' ' // Hide icon
-    }
-  }
-]);
+      path: ' ', // Hide icon
+    },
+  },
+])
