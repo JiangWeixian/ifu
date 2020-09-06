@@ -1,5 +1,5 @@
 {
-  "name": "popcron",
+  "name": "@ifu/popcron",
   "version": "0.0.0",
   "description": "translate cRonstrue",
   "main": "index.js",
