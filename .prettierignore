@@ -28,3 +28,4 @@ Jenkinsfile
 *.watchmanconfig
 *.flowconfig
 LICENSE
+*.js
