@@ -2,7 +2,7 @@
   "name": "ifu",
   "scripts": {
     "publish": "lerna publish",
-    "prepublish": "lerna run build",
+    "prepublish": "gitmoji -r && lerna run build",
     "build": "lerna run build",
     "prettier": "prettier --config .prettierrc **/* --write"
   },
