@@ -34,7 +34,8 @@
   "license": "MIT",
   "dependencies": {
     "alfy": "^0.10.0",
-    "cronstrue": "^1.100.0"
+    "cronstrue": "^1.100.0",
+    "tslib": "^2.0.1"
   },
   "devDependencies": {
     "alfy-test": "^0.4.0",
