@@ -25,7 +25,8 @@
   ],
   "files": [
     "index.js",
-    "info.plist"
+    "info.plist",
+    "icon.png"
   ],
   "engines": {
     "node": ">=8"
