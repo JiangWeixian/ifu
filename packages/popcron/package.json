@@ -9,6 +9,9 @@
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "directory": "popcron",
     "type": "git",
@@ -37,5 +40,6 @@
     "alfy-test": "^0.4.0",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
-  }
+  },
+  "gitHead": "82b8ba23dcee0f672d9813df0defa18a79e4fb91"
 }
