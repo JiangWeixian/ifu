@@ -12,4 +12,10 @@ alfy_1.default.output([
             path: ' ',
         },
     },
+    {
+        title: item,
+        icon: {
+            path: ' ',
+        },
+    },
 ]);
