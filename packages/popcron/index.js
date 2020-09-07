@@ -8,14 +8,13 @@ var item = i18n_1.default.toString(alfy_1.default.input, { locale: process.env.l
 alfy_1.default.output([
     {
         title: item,
+        arg: item,
         icon: {
             path: ' ',
         },
-    },
-    {
-        title: item,
-        icon: {
-            path: ' ',
+        text: {
+            copy: item,
+            largetype: item,
         },
     },
 ]);
