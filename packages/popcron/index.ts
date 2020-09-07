@@ -7,14 +7,13 @@ const item = cronstrue.toString(alfy.input, { locale: process.env.locale || DEFA
 alfy.output([
   {
     title: item,
+    arg: item,
     icon: {
       path: ' ', // Hide icon
     },
-  },
-  {
-    title: item,
-    icon: {
-      path: ' ', // Hide icon
+    text: {
+      copy: item,
+      largetype: item,
     },
   },
 ])
