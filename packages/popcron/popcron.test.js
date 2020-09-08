@@ -8,7 +8,16 @@ test('main', async (t) => {
 
   t.deepEqual(result, [
     {
-      title: 'At 11:00 PM, Monday through Friday',
+      arg: 'At 11:00 PM, Monday through Friday',
+      icon: {
+        path: ' ',
+      },
+      subtitle: '0 23 ? * MON-FRI',
+      text: {
+        copy: 'At 11:00 PM, Monday through Friday',
+        largetype: 'At 11:00 PM, Monday through Friday',
+      },
+        title: 'At 11:00 PM, Monday through Friday',
     },
   ])
 })
