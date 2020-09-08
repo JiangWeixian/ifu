@@ -8,8 +8,7 @@ if (alfy.input === 'h') {
   const _history = alfy.cache.get(KEY)
   history = _history ? JSON.parse(_history) : []
   alfy.output(history)
-}
-if (alfy.input === 'r') {
+} else if (alfy.input === 'r') {
   alfy.cache.set(KEY, JSON.stringify([]))
   alfy.output([])
 } else {
