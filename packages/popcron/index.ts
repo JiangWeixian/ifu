@@ -3,9 +3,15 @@ import alfy from 'alfy'
 
 const DEFAULT_LOCALE = 'en'
 const KEY = 'history'
-const history = alfy.cache.get(KEY)
+let history: any[] = []
 if (alfy.input === 'h') {
-  alfy.output(history ? JSON.parse(history) : [])
+  const _history = alfy.cache.get(KEY)
+  history = _history ? JSON.parse(_history) : []
+  alfy.output(history)
+}
+if (alfy.input === 'r') {
+  alfy.cache.set(KEY, JSON.stringify([]))
+  alfy.output([])
 } else {
   const result = cronstrue.toString(alfy.input, { locale: process.env.locale || DEFAULT_LOCALE })
   const item = {
