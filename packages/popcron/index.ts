@@ -3,10 +3,9 @@ import alfy from 'alfy'
 
 const DEFAULT_LOCALE = 'en'
 const KEY = 'history'
-let history: any[] = []
+const _history = alfy.cache.get(KEY)
+const history = _history ? JSON.parse(_history) : []
 if (alfy.input === 'h') {
-  const _history = alfy.cache.get(KEY)
-  history = _history ? JSON.parse(_history) : []
   alfy.output(history)
 } else if (alfy.input === 'r') {
   alfy.cache.set(KEY, JSON.stringify([]))
