@@ -36,9 +36,11 @@
   "dependencies": {
     "alfy": "^0.10.0",
     "cronstrue": "^1.100.0",
+    "lodash.uniqby": "^4.7.0",
     "tslib": "^2.0.1"
   },
   "devDependencies": {
+    "@types/lodash.uniqby": "^4.7.6",
     "alfy-test": "^0.4.0",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
