@@ -4,6 +4,8 @@
     "publish": "lerna publish",
     "prepublish": "gitmoji -r && lerna run build",
     "build": "lerna run build",
+    "test": "lerna run test",
+    "pretest": "lerna run build",
     "prettier": "prettier --config .prettierrc **/* --write"
   },
   "devDependencies": {
