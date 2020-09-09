@@ -1,0 +1,21 @@
+{
+  "name": "daydayup",
+  "version": "1.0.0",
+  "description": "alfred dayjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "alfred"
+  ],
+  "author": "JiangWeixian",
+  "license": "MIT",
+  "dependencies": {
+    "alfy": "^0.10.0",
+    "dayjs": "^1.8.35"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  }
+}
