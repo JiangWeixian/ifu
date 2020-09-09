@@ -118,3 +118,4 @@ dist
 
 # build
 packages/popcron/index.js
+packages/daydayup/index.js
