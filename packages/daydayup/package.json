@@ -16,6 +16,7 @@
     "dayjs": "^1.8.35"
   },
   "devDependencies": {
+    "ava": "^3.12.1",
     "typescript": "^4.0.2"
   }
 }
