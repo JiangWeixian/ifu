@@ -53,7 +53,7 @@ const DEFAULT_ITEMS = [
   toItem(endOfDay, { subtitle: 'end of the day' }),
   toItem(endOfYear, { subtitle: 'end of the year' }),
   toItem(endOfMonth, { subtitle: 'end of the month' }),
-  toItem(isLeapYear, { title: isLeapYear ? '今年365天' : '今年364天' }),
+  toItem(isLeapYear, { title: isLeapYear ? '今年有365天' : '今年有364天' }),
 ]
 
 alfy.output(DEFAULT_ITEMS)
