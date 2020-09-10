@@ -48,7 +48,7 @@ const DEFAULT_ITEMS = [
     subtitle: `${dayOfWeek === 5 ? '🎉 是' : '💔 不是'}周五！`,
   }),
   toItem(dayOfYear, { title: `今天是一年中第${dayOfYear}天` }),
-  toItem(weekOfYear, { title: `这周是第${weekOfYear}周` }),
+  toItem(weekOfYear, { title: `这周是一年中第${weekOfYear}周` }),
   toItem(startOfDay, { subtitle: 'start of the day' }),
   toItem(endOfDay, { subtitle: 'end of the day' }),
   toItem(endOfYear, { subtitle: 'end of the year' }),
