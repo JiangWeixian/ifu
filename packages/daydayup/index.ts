@@ -29,10 +29,14 @@ const toItem = (
 // const DEFAULT_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 const now = dayjs().valueOf()
 const [startOfDay, endOfDay] = [dayjs().startOf('day').valueOf(), dayjs().endOf('day').valueOf()]
-const [endOfYear, endOfMonth] = [dayjs().endOf('year').valueOf(), dayjs().endOf('month').valueOf()]
+const [startOfYear, endOfYear, endOfMonth] = [
+  dayjs().startOf('year').valueOf(),
+  dayjs().endOf('year').valueOf(),
+  dayjs().endOf('month').valueOf(),
+]
 const [dayOfWeek, weekOfYear, dayOfYear] = [dayjs().day(), dayjs().week(), dayjs().dayOfYear()]
 const isLeapYear = dayjs().isLeapYear()
-const remain = dayjs().startOf('year').valueOf() / dayjs().endOf('year').valueOf()
+const remain = (now - startOfYear) / (endOfYear - startOfYear)
 
 const WEEK_DAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
 

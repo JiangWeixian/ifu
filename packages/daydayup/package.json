@@ -1,5 +1,5 @@
 {
-  "name": "daydayup",
+  "name": "@ifu/daydayup",
   "version": "1.0.0",
   "description": "alfred dayjs",
   "main": "index.js",
@@ -8,6 +8,9 @@
     "build": "tsc",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "alfred"
