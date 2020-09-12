@@ -19,7 +19,7 @@
   "files": [
     "index.js",
     "info.plist",
-    "icon"
+    "icon.png"
   ],
   "author": "JiangWeixian",
   "license": "MIT",
