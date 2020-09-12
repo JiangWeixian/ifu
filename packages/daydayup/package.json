@@ -18,7 +18,8 @@
   ],
   "files": [
     "index.js",
-    "info.plist"
+    "info.plist",
+    "icon"
   ],
   "author": "JiangWeixian",
   "license": "MIT",
