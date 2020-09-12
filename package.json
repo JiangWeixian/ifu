@@ -2,7 +2,7 @@
   "name": "ifu",
   "scripts": {
     "publish": "lerna publish",
-    "prepublish": "gitmoji -r && lerna run build",
+    "prepublish": "nrm use npm && gitmoji -r && lerna run build",
     "build": "lerna run build",
     "test": "lerna run test",
     "pretest": "lerna run build",
