@@ -59,23 +59,28 @@ const getDefaultOutput = () => {
     dayjs().endOf('month'),
   ]
   const [dayOfWeek, weekOfYear, dayOfYear] = [dayjs().day(), dayjs().week(), dayjs().dayOfYear()]
+  const year = dayjs().year()
   const isLeapYear = dayjs().isLeapYear()
   const quarterOfYear = dayjs().quarter()
   const remain =
     (now.valueOf() - startOfYear.valueOf()) / (endOfYear.valueOf() - startOfYear.valueOf())
 
   return [
-    toItem(now.valueOf(), { title: `今天是${now.format(DEFAULT_FORMAT)}` }),
-    toItem(remain, { title: `今年已经过去了${remain * 100}%` }),
+    toItem(now.valueOf(), { title: `today is ${now.format(DEFAULT_FORMAT)}` }),
+    toItem(remain, { title: `this is year has passed ${remain * 100}%` }),
     toItem(dayOfWeek, {
-      title: `今天是${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
+      title: `today is ${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
     }),
-    toItem(dayOfYear, { title: `今天是一年中第${dayOfYear}天` }),
-    toItem(weekOfYear, { title: `这周是一年中第${weekOfYear}周` }),
-    toItem(quarterOfYear, { title: `本季度是一年中第${quarterOfYear}季度` }),
-    toItem(endOfYear.valueOf(), { title: `今年最后一天是${endOfYear.format(DEFAULT_FORMAT)}` }),
-    toItem(endOfMonth.valueOf(), { title: `这个月最后一天是${endOfMonth.format(DEFAULT_FORMAT)}` }),
-    toItem(isLeapYear, { title: isLeapYear ? '今年有365天' : '今年有364天' }),
+    toItem(dayOfYear, { title: `today is the ${dayOfYear}th day of the year` }),
+    toItem(weekOfYear, { title: `this week is ${weekOfYear}th week of the year` }),
+    toItem(quarterOfYear, { title: `this year is ${quarterOfYear}quarter of the year` }),
+    toItem(endOfYear.valueOf(), {
+      title: `the last day of year is ${endOfYear.format(DEFAULT_FORMAT)}`,
+    }),
+    toItem(endOfMonth.valueOf(), {
+      title: `the last day of month is ${endOfMonth.format(DEFAULT_FORMAT)}`,
+    }),
+    toItem(isLeapYear, { title: `${year} has ${isLeapYear ? 365 : 364} days` }),
   ]
 }
 
@@ -92,7 +97,7 @@ const getDurationOutput = (type: 'iso' | 'number' = 'iso', value: string | numbe
     toItem(ms, { title: `${ms} milliseconds` }),
     toItem(before.valueOf(), { title: `${beforeHumanize} is ${before.format(DETAIL_FORMAT)}` }),
     toItem(after.valueOf(), { title: `${afterHumanize} is ${after.format(DETAIL_FORMAT)}` }),
-    toItem(now.valueOf(), { title: `现在是${now.format(DETAIL_FORMAT)}` }),
+    toItem(now.valueOf(), { title: `now is ${now.format(DETAIL_FORMAT)}` }),
   ]
 }
 
