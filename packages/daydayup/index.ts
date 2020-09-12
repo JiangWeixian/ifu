@@ -3,10 +3,12 @@ import dayjs from 'dayjs'
 import WeekOfYear from 'dayjs/plugin/weekOfYear'
 import IsLeapYear from 'dayjs/plugin/isLeapYear'
 import DayOfYear from 'dayjs/plugin/dayOfYear'
+import QuarterOfYear from 'dayjs/plugin/quarterOfYear'
 
 dayjs.extend(WeekOfYear)
 dayjs.extend(IsLeapYear)
 dayjs.extend(DayOfYear)
+dayjs.extend(QuarterOfYear)
 
 const toItem = (
   value: number | string | boolean,
@@ -36,6 +38,7 @@ const [startOfYear, endOfYear, endOfMonth] = [
 ]
 const [dayOfWeek, weekOfYear, dayOfYear] = [dayjs().day(), dayjs().week(), dayjs().dayOfYear()]
 const isLeapYear = dayjs().isLeapYear()
+const quarterOfYear = dayjs().quarter()
 const remain =
   (now.valueOf() - startOfYear.valueOf()) / (endOfYear.valueOf() - startOfYear.valueOf())
 
@@ -49,6 +52,7 @@ const DEFAULT_ITEMS = [
   }),
   toItem(dayOfYear, { title: `今天是一年中第${dayOfYear}天` }),
   toItem(weekOfYear, { title: `这周是一年中第${weekOfYear}周` }),
+  toItem(quarterOfYear, { title: `本季度是一年中第${quarterOfYear}季度` }),
   toItem(endOfYear.valueOf(), { title: `今年最后一天是${endOfYear.format(DEFAULT_FORMAT)}` }),
   toItem(endOfMonth.valueOf(), { title: `这个月最后一天是${endOfMonth.format(DEFAULT_FORMAT)}` }),
   toItem(isLeapYear, { title: isLeapYear ? '今年有365天' : '今年有364天' }),
