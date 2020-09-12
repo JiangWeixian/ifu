@@ -1,23 +1,32 @@
 const test = require('ava')
 const alfyTest = require('alfy-test')
 
-test('main', async (t) => {
+test('should has default output', async (t) => {
   const alfy = alfyTest()
 
   const result = await alfy('')
 
-  t.deepEqual(result, [
-    {
-      arg: 'At 11:00 PM, Monday through Friday',
-      icon: {
-        path: ' ',
-      },
-      subtitle: '0 23 ? * MON-FRI',
-      text: {
-        copy: 'At 11:00 PM, Monday through Friday',
-        largetype: 'At 11:00 PM, Monday through Friday',
-      },
-        title: 'At 11:00 PM, Monday through Friday',
-    },
-  ])
+  console.log(result)
+
+  t.is(!!result, true)
+})
+
+test('should support duration output', async (t) => {
+  const alfy = alfyTest()
+
+  const result = await alfy('1d')
+
+  console.log(result)
+
+  t.is(!!result, true)
+})
+
+test('should support number duration output', async (t) => {
+  const alfy = alfyTest()
+
+  const result = await alfy('d 366000')
+
+  console.log(result)
+
+  t.is(!!result, true)
 })

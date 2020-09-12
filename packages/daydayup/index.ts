@@ -36,7 +36,7 @@ const getInputMode = (input: string = '') => {
   if (!input) {
     return 'default'
   }
-  if (input === 'd') {
+  if (input.startsWith('d')) {
     return 'number-duration'
   }
   const durationRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/
@@ -69,11 +69,11 @@ const getDefaultOutput = () => {
     toItem(now.valueOf(), { title: `today is ${now.format(DEFAULT_FORMAT)}` }),
     toItem(remain, { title: `this is year has passed ${remain * 100}%` }),
     toItem(dayOfWeek, {
-      title: `today is ${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
+      title: `今天是 ${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
     }),
     toItem(dayOfYear, { title: `today is the ${dayOfYear}th day of the year` }),
     toItem(weekOfYear, { title: `this week is ${weekOfYear}th week of the year` }),
-    toItem(quarterOfYear, { title: `this year is ${quarterOfYear}quarter of the year` }),
+    toItem(quarterOfYear, { title: `this year is ${quarterOfYear}th quarter of the year` }),
     toItem(endOfYear.valueOf(), {
       title: `the last day of year is ${endOfYear.format(DEFAULT_FORMAT)}`,
     }),
@@ -91,12 +91,11 @@ const getDurationOutput = (type: 'iso' | 'number' = 'iso', value: string | numbe
   const now = dayjs()
   const before = now.subtract(ms, 'millisecond')
   const after = now.add(ms, 'millisecond')
-  const beforeHumanize = duration.humanize(false)
-  const afterHumanize = duration.humanize(true)
+  const humanize = duration.humanize(false)
   return [
     toItem(ms, { title: `${ms} milliseconds` }),
-    toItem(before.valueOf(), { title: `${beforeHumanize} is ${before.format(DETAIL_FORMAT)}` }),
-    toItem(after.valueOf(), { title: `${afterHumanize} is ${after.format(DETAIL_FORMAT)}` }),
+    toItem(before.valueOf(), { title: `${humanize} ago is ${before.format(DETAIL_FORMAT)}` }),
+    toItem(after.valueOf(), { title: `in ${humanize} is ${after.format(DETAIL_FORMAT)}` }),
     toItem(now.valueOf(), { title: `now is ${now.format(DETAIL_FORMAT)}` }),
   ]
 }
