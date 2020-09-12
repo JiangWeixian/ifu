@@ -1,5 +1,6 @@
 import alfy from 'alfy'
 import dayjs from 'dayjs'
+import isNaN from 'lodash.isnan'
 import WeekOfYear from 'dayjs/plugin/weekOfYear'
 import IsLeapYear from 'dayjs/plugin/isLeapYear'
 import DayOfYear from 'dayjs/plugin/dayOfYear'
@@ -104,10 +105,18 @@ const getDurationOutput = (type: 'iso' | 'number' = 'iso', value: string | numbe
 }
 
 const getTimeOutput = (value: string) => {
-  const now = dayjs(value)
+  let time
+  if (time === 'now') {
+    time = undefined
+  } else if (isNaN(Number(value))) {
+    time = value
+  }
+  time = Number(value)
+  const now = dayjs(time)
   const startOfDay = now.startOf('day')
   return [
     toItem(now.valueOf()),
+    toItem(now.unix(), { subtitle: 'unix timestamp' }),
     toItem(now.format(DEFAULT_FORMAT)),
     toItem(startOfDay.valueOf(), {
       title: `start of this day is ${startOfDay.format(DEFAULT_FORMAT)}`,
