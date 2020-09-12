@@ -43,37 +43,40 @@ const getInputMode = (input: string = '') => {
   if (`P${input.toUpperCase()}`.match(durationRegex)) {
     return 'iso-duration'
   }
-  return 'default'
+  return 'time'
 }
 
 const DEFAULT_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 const DETAIL_FORMAT = 'YYYY-MM-DD HH:mm:ss.SSS'
 const WEEK_DAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
 
-const getDefaultOutput = () => {
-  const now = dayjs()
-  // const [startOfDay, endOfDay] = [dayjs().startOf('day'), dayjs().endOf('day')]
+const getDefaultOutput = (value?: string) => {
+  const now = dayjs(value)
+  const startOfDay = now.startOf('day')
   const [startOfYear, endOfYear, endOfMonth] = [
-    dayjs().startOf('year'),
-    dayjs().endOf('year'),
-    dayjs().endOf('month'),
+    now.startOf('year'),
+    now.endOf('year'),
+    now.endOf('month'),
   ]
-  const [dayOfWeek, weekOfYear, dayOfYear] = [dayjs().day(), dayjs().week(), dayjs().dayOfYear()]
-  const year = dayjs().year()
-  const isLeapYear = dayjs().isLeapYear()
-  const quarterOfYear = dayjs().quarter()
+  const [dayOfWeek, weekOfYear, dayOfYear] = [now.day(), now.week(), now.dayOfYear()]
+  const year = now.year()
+  const isLeapYear = now.isLeapYear()
+  const quarterOfYear = now.quarter()
   const remain =
     (now.valueOf() - startOfYear.valueOf()) / (endOfYear.valueOf() - startOfYear.valueOf())
 
   return [
     toItem(now.valueOf(), { title: `today is ${now.format(DEFAULT_FORMAT)}` }),
-    toItem(remain, { title: `this is year has passed ${remain * 100}%` }),
+    toItem(remain, { title: `${year} has passed ${remain * 100}%` }),
     toItem(dayOfWeek, {
       title: `今天是 ${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
     }),
     toItem(dayOfYear, { title: `today is the ${dayOfYear}th day of the year` }),
     toItem(weekOfYear, { title: `this week is ${weekOfYear}th week of the year` }),
     toItem(quarterOfYear, { title: `this year is ${quarterOfYear}th quarter of the year` }),
+    toItem(startOfDay.valueOf(), {
+      title: `start of this day is ${startOfDay.format(DEFAULT_FORMAT)}`,
+    }),
     toItem(endOfYear.valueOf(), {
       title: `the last day of year is ${endOfYear.format(DEFAULT_FORMAT)}`,
     }),
@@ -100,6 +103,18 @@ const getDurationOutput = (type: 'iso' | 'number' = 'iso', value: string | numbe
   ]
 }
 
+const getTimeOutput = (value: string) => {
+  const now = dayjs(value)
+  const startOfDay = now.startOf('day')
+  return [
+    toItem(now.valueOf()),
+    toItem(now.format(DEFAULT_FORMAT)),
+    toItem(startOfDay.valueOf(), {
+      title: `start of this day is ${startOfDay.format(DEFAULT_FORMAT)}`,
+    }),
+  ]
+}
+
 const mode = getInputMode(alfy.input)
 
 switch (mode) {
@@ -112,6 +127,8 @@ switch (mode) {
   case 'number-duration':
     const ms = alfy.input.split(' ')[1]
     alfy.output(getDurationOutput('number', Number(ms)))
+  case 'time':
+    alfy.output(getTimeOutput(alfy.input))
   default:
     break
 }
