@@ -30,3 +30,23 @@ test('should support number duration output', async (t) => {
 
   t.is(!!result, true)
 })
+
+test('should support parse time', async (t) => {
+  const alfy = alfyTest()
+
+  const result = await alfy('2018-04-04T16:00:00.000Z')
+
+  console.log(result)
+
+  t.is(!!result, true)
+})
+
+test('should support parse now', async (t) => {
+  const alfy = alfyTest()
+
+  const result = await alfy('now')
+
+  console.log(result)
+
+  t.is(!!result, true)
+})

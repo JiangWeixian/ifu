@@ -70,7 +70,7 @@ const getDefaultOutput = (value?: string) => {
     toItem(now.valueOf(), { title: `today is ${now.format(DEFAULT_FORMAT)}` }),
     toItem(remain, { title: `${year} has passed ${remain * 100}%` }),
     toItem(dayOfWeek, {
-      title: `今天是 ${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
+      title: `今天是${WEEK_DAYS[dayOfWeek]}${dayOfWeek === 5 ? '🎉🎉🎉' : ''}`,
     }),
     toItem(dayOfYear, { title: `today is the ${dayOfYear}th day of the year` }),
     toItem(weekOfYear, { title: `this week is ${weekOfYear}th week of the year` }),
@@ -106,12 +106,13 @@ const getDurationOutput = (type: 'iso' | 'number' = 'iso', value: string | numbe
 
 const getTimeOutput = (value: string) => {
   let time
-  if (time === 'now') {
+  if (value === 'now') {
     time = undefined
   } else if (isNaN(Number(value))) {
     time = value
+  } else {
+    time = Number(value)
   }
-  time = Number(value)
   const now = dayjs(time)
   const startOfDay = now.startOf('day')
   return [
@@ -136,8 +137,10 @@ switch (mode) {
   case 'number-duration':
     const ms = alfy.input.split(' ')[1]
     alfy.output(getDurationOutput('number', Number(ms)))
+    break
   case 'time':
     alfy.output(getTimeOutput(alfy.input))
+    break
   default:
     break
 }
