@@ -13,6 +13,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "directory": "daydayup",
+    "type": "git",
+    "url": "https://github.com/JiangWeixian/afu"
+  },
+  "homepage": "https://github.com/JiangWeixian/afu/packages/daydayup/README.md",
   "keywords": [
     "alfred",
     "dayjs",
