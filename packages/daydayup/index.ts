@@ -75,7 +75,7 @@ const getDefaultOutput = (value?: string) => {
     }),
     toItem(dayOfYear, { title: `today is the ${dayOfYear}th day of the year` }),
     toItem(weekOfYear, { title: `this week is ${weekOfYear}th week of the year` }),
-    toItem(quarterOfYear, { title: `this year is ${quarterOfYear}th quarter of the year` }),
+    toItem(quarterOfYear, { title: `this quarter is ${quarterOfYear}th quarter of the year` }),
     toItem(startOfDay.valueOf(), {
       title: `start of this day is ${startOfDay.format(DEFAULT_FORMAT)}`,
     }),
