@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "module": "CommonJS",
+    "lib": ["ES2020.String"],
     "moduleResolution": "node",
     "importHelpers": true,
     "esModuleInterop": true,
@@ -13,7 +14,8 @@
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "downlevelIteration": true
   },
   "exclude": ["node_modules", "lib", "test", "utils"]
 }
