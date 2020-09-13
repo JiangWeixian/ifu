@@ -1,7 +1,12 @@
-# @ifu
-> created for alfred workflows
+# 𝙞𝙛𝙪
+
+just create useful alfred workflows
 
 [🍿️](/packages/popcron/README.md)[🕑](/packages/daydayup/README.md)
+
+<a><img src='./screenshots/popcron.gif' width='350' /></a><a><img src='./screenshots/popcron.gif' width='350' /></a>
+
+*▲ 🍿️🕑 screenshots*
 
 ## For Developers
 

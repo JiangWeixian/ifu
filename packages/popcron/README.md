@@ -1,5 +1,12 @@
+
+<img align='right' width='100' src='./icon.png' alt='logo' />
+
 # @ifu/popcron
-> translate cronstrue
+
+translate cronstrue
+
+![popcron](/screenshots/popcron.gif)  
+*▲ popcron*
 
 ## usage
 
@@ -11,7 +18,6 @@ npm install -g @ifu/popcron
 
 - translate cron like `cron 0 23 ? * MON-FRI`
 - history modes like `cron h`
-
 
 ## configs
 
