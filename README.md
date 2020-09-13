@@ -4,7 +4,11 @@ just create useful alfred workflows
 
 [🍿️](/packages/popcron/README.md)[🕑](/packages/daydayup/README.md)
 
-<a><img src='./screenshots/popcron.gif' width='350' /></a><a><img src='./screenshots/popcron.gif' width='350' /></a>
+<div align='center'>
+
+<a><img src='./screenshots/popcron.gif' width='350' /></a><a><img src='./screenshots/daydayup.gif' width='350' /></a>
+
+</div>
 
 *▲ 🍿️🕑 screenshots*
 

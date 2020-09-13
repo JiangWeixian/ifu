@@ -1,9 +1,13 @@
-<img align='right' width='100' src='./icon.png' alt='logo' />
+# @𝙞𝙛𝙪/𝙙𝙖𝙮𝙙𝙖𝙮𝙪𝙥
 
-# @ifu/daydayup
-display or parse time in effect way
+🕑 display or parse time in effect way
 
-![daydayup](/screenshots/daydayup.gif)  
+<div align='center'>
+
+<a><img src='/screenshots/daydayup.gif' width='432' /></a>
+
+</div>
+
 *▲ daydayup*
 
 ## usage

@@ -1,11 +1,14 @@
+# @𝙞𝙛𝙪/𝙥𝙤𝙥𝙘𝙧𝙤𝙣
 
-<img align='right' width='100' src='./icon.png' alt='logo' />
+🍿️ translate cronstrue
 
-# @ifu/popcron
 
-translate cronstrue
+<div align='center'>
 
-![popcron](/screenshots/popcron.gif)  
+<a><img src='/screenshots/popcron.gif' width='300' /></a>
+
+</div>
+
 *▲ popcron*
 
 ## usage
