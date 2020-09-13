@@ -4,7 +4,7 @@
 
 <div align='center'>
 
-<a><img src='/screenshots/daydayup.gif' width='432' /></a>
+<a><img src='/screenshots/daydayup.gif' width='600' /></a>
 
 </div>
 

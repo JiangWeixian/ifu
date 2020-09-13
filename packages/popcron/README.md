@@ -5,7 +5,7 @@
 
 <div align='center'>
 
-<a><img src='/screenshots/popcron.gif' width='300' /></a>
+<a><img src='/screenshots/popcron.gif' width='600' /></a>
 
 </div>
 
