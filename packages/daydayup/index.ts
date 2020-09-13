@@ -36,7 +36,7 @@ const toItem = (
 }
 
 const getInputMode = (input: string = '') => {
-  if (input === ' ' || input === 'ls') {
+  if (input === ' ' || input === 'ls' || input === '.') {
     return 'default'
   }
   if (input.startsWith('d')) {
