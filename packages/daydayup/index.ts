@@ -8,6 +8,8 @@ import QuarterOfYear from 'dayjs/plugin/quarterOfYear'
 import Duration from 'dayjs/plugin/duration'
 import RelativeTime from 'dayjs/plugin/relativeTime'
 
+import { isStringDuration, parseStringDurations } from './utils'
+
 dayjs.extend(WeekOfYear)
 dayjs.extend(IsLeapYear)
 dayjs.extend(DayOfYear)
@@ -34,15 +36,14 @@ const toItem = (
 }
 
 const getInputMode = (input: string = '') => {
-  if (!input) {
+  if (input === ' ' || input === 'ls') {
     return 'default'
   }
   if (input.startsWith('d')) {
     return 'number-duration'
   }
-  const durationRegex = /^(-|\+)?P(?:([-+]?[0-9,.]*)Y)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)W)?(?:([-+]?[0-9,.]*)D)?(?:T(?:([-+]?[0-9,.]*)H)?(?:([-+]?[0-9,.]*)M)?(?:([-+]?[0-9,.]*)S)?)?$/
-  if (`P${input.toUpperCase()}`.match(durationRegex)) {
-    return 'iso-duration'
+  if (isStringDuration(input)) {
+    return 'string-duration'
   }
   return 'time'
 }
@@ -88,9 +89,8 @@ const getDefaultOutput = (value?: string) => {
   ]
 }
 
-const getDurationOutput = (type: 'iso' | 'number' = 'iso', value: string | number) => {
-  const duration =
-    type === 'iso' ? dayjs.duration(`P${alfy.input.toUpperCase()}`) : dayjs.duration(value)
+const getDurationOutput = (type: 'string' | 'number' = 'string', value: object | number) => {
+  const duration = type === 'string' ? dayjs.duration(value) : dayjs.duration(value)
   const ms = duration.asMilliseconds()
   const now = dayjs()
   const before = now.subtract(ms, 'millisecond')
@@ -131,8 +131,9 @@ switch (mode) {
   case 'default':
     alfy.output(getDefaultOutput())
     break
-  case 'iso-duration':
-    alfy.output(getDurationOutput('iso', alfy.input))
+  case 'string-duration':
+    const durations = parseStringDurations(alfy.input)
+    alfy.output(getDurationOutput('string', durations))
     break
   case 'number-duration':
     const ms = alfy.input.split(' ')[1]

@@ -1,20 +1,35 @@
 const test = require('ava')
 const alfyTest = require('alfy-test')
+const utils = require('./utils.js')
 
 test('should has default output', async (t) => {
   const alfy = alfyTest()
 
-  const result = await alfy('')
+  const result = await alfy(' ')
 
   console.log(result)
 
   t.is(!!result, true)
 })
 
+test('should support string durations', async (t) => {
+  const input = '1y1m1ms'
+  t.is(utils.isStringDuration(input), true)
+})
+
+test('should parse string durations correct', async (t) => {
+  const input = '1y1m1ms'
+  t.deepEqual(utils.parseStringDurations(input), {
+    'years': 1,
+    'minutes': 1,
+    "milliseconds": 1,
+  })
+})
+
 test('should support duration output', async (t) => {
   const alfy = alfyTest()
 
-  const result = await alfy('1d')
+  const result = await alfy('1y1h')
 
   console.log(result)
 
