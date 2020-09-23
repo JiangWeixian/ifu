@@ -98,6 +98,7 @@ const getDurationOutput = (type: 'string' | 'number' = 'string', value: object |
   const humanize = duration.humanize(false)
   return [
     toItem(ms, { title: `${ms} milliseconds` }),
+    toItem(humanize),
     toItem(before.valueOf(), { title: `${humanize} ago is ${before.format(DETAIL_FORMAT)}` }),
     toItem(after.valueOf(), { title: `in ${humanize} is ${after.format(DETAIL_FORMAT)}` }),
     toItem(now.valueOf(), { title: `now is ${now.format(DETAIL_FORMAT)}` }),
