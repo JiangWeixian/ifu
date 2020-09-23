@@ -1,6 +1,6 @@
 # 𝙞𝙛𝙪
 
-just create useful alfred workflows
+𝘾𝙧𝙚𝙖𝙩𝙚 𝙬𝙤𝙧𝙠𝙛𝙡𝙤𝙬𝙨 𝙛𝙤𝙧 𝙚𝙢𝙤𝙟𝙞
 
 [🍿️](/packages/popcron/README.md)[🕑](/packages/daydayup/README.md)
 
