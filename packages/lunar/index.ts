@@ -66,17 +66,6 @@ alfy.output(
         largetype: `${phase.emoji} ${phase.cname}`,
       },
     },
-    {
-      title: [lunar.monthCn, lunar.dayCn].join(''),
-      arg: [lunar.monthCn, lunar.dayCn].join(''),
-      icon: {
-        path: ' ', // Hide icon
-      },
-      text: {
-        copy: [lunar.monthCn, lunar.dayCn].join(''),
-        largetype: [lunar.monthCn, lunar.dayCn].join(''),
-      },
-    },
     lunar.isTerm
       ? {
           title: lunar.term,
