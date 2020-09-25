@@ -120,3 +120,5 @@ dist
 packages/popcron/index.js
 packages/daydayup/index.js
 packages/daydayup/utils.js
+packages/lunar/index.js
+packages/lunar/moonphase.js
