@@ -2,6 +2,8 @@ import * as solarLunar from 'solarlunar'
 import dayjs from 'dayjs'
 import alfy from 'alfy'
 
+import { moonphase } from './moonphase'
+
 type Lunar = {
   lYear: number
   lMonth: number
@@ -25,11 +27,32 @@ type Lunar = {
 
 const now = dayjs()
 const lunar: Lunar = solarLunar.solar2lunar(now.year(), now.month(), now.day())
-
-console.log(lunar)
+const phase = moonphase(now.toDate())
 
 alfy.output(
   [
+    {
+      title: `${lunar.animal}年`,
+      arg: lunar.animal,
+      icon: {
+        path: ' ', // Hide icon
+      },
+      text: {
+        copy: lunar.animal,
+        largetype: lunar.animal,
+      },
+    },
+    {
+      title: `${phase.emoji} ${phase.cname}`,
+      arg: `${phase.emoji} ${phase.cname}`,
+      icon: {
+        path: ' ', // Hide icon
+      },
+      text: {
+        copy: `${phase.emoji} ${phase.cname}`,
+        largetype: `${phase.emoji} ${phase.cname}`,
+      },
+    },
     {
       title: [lunar.monthCn, lunar.dayCn].join(''),
       arg: [lunar.monthCn, lunar.dayCn].join(''),
@@ -54,6 +77,17 @@ alfy.output(
           },
         }
       : undefined,
+    {
+      title: [lunar.monthCn, lunar.dayCn].join(''),
+      arg: [lunar.monthCn, lunar.dayCn].join(''),
+      icon: {
+        path: ' ', // Hide icon
+      },
+      text: {
+        copy: [lunar.monthCn, lunar.dayCn].join(''),
+        largetype: [lunar.monthCn, lunar.dayCn].join(''),
+      },
+    },
     {
       title: [`${lunar.gzYear}年`, `${lunar.gzMonth}月`, `${lunar.gzDay}日`].join('·'),
       arg: [`${lunar.gzYear}年`, `${lunar.gzMonth}月`, `${lunar.gzDay}日`].join('·'),
