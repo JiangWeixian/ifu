@@ -28,12 +28,26 @@ type Lunar = {
 const now = dayjs()
 const lunar: Lunar = solarLunar.solar2lunar(now.year(), now.month(), now.day())
 const phase = moonphase(now.toDate())
+const years = {
+  鼠: '🐭',
+  牛: '🐮',
+  虎: '🐯',
+  兔: '🐇',
+  龙: '🐉',
+  蛇: '🐍',
+  马: '🦄',
+  羊: '🐏',
+  猴: '🐒',
+  鸡: '🐤',
+  狗: '🐶',
+  猪: '🐷',
+}
 
 alfy.output(
   [
     {
-      title: `${lunar.animal}年`,
-      arg: lunar.animal,
+      title: `${years[lunar.animal]}·${lunar.animal}年`,
+      arg: `${years[lunar.animal]}·${lunar.animal}年`,
       icon: {
         path: ' ', // Hide icon
       },
@@ -43,8 +57,8 @@ alfy.output(
       },
     },
     {
-      title: `${phase.emoji} ${phase.cname}`,
-      arg: `${phase.emoji} ${phase.cname}`,
+      title: `${phase.emoji}·${phase.cname}`,
+      arg: `${phase.emoji}·${phase.cname}`,
       icon: {
         path: ' ', // Hide icon
       },
