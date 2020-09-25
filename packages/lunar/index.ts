@@ -25,7 +25,7 @@ type Lunar = {
 }
 
 const now = dayjs()
-const lunar: Lunar = solarLunar.solar2lunar(now.year(), now.month(), now.day())
+const lunar: Lunar = solarLunar.solar2lunar(now.year(), now.month() + 1, now.date())
 const phase = moonphase(now.toDate())
 const years = {
   鼠: '🐭',
