@@ -1,6 +1,6 @@
 {
   "name": "@ifu/daydayup",
-  "version": "1.3.0",
+  "version": "1.3.1-alpha.0",
   "description": "alfred dayjs",
   "main": "index.js",
   "scripts": {
@@ -33,8 +33,8 @@
   "author": "JiangWeixian",
   "license": "MIT",
   "dependencies": {
-    "dayjs": "^1.8.36",
     "alfy": "^0.10.0",
+    "dayjs": "^1.8.36",
     "lodash.isnan": "^3.0.2",
     "tslib": "^2.0.1"
   },
