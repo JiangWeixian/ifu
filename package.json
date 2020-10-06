@@ -23,5 +23,7 @@
       "pre-commit": "pretty-quick --staged"
     }
   },
-  "dependencies": {}
+  "dependencies": {
+    "dayjs": "^1.8.36"
+  }
 }

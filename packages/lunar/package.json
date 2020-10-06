@@ -1,7 +1,7 @@
 {
-  "name": "@ifu/daydayup",
-  "version": "1.3.1-alpha.0",
-  "description": "alfred dayjs",
+  "name": "@ifu/lunar",
+  "version": "1.3.2",
+  "description": "alfred lunar",
   "main": "index.js",
   "scripts": {
     "test": "ava",
@@ -14,19 +14,19 @@
     "access": "public"
   },
   "repository": {
-    "directory": "daydayup",
+    "directory": "lunar",
     "type": "git",
     "url": "https://github.com/JiangWeixian/afu"
   },
-  "homepage": "https://github.com/JiangWeixian/afu/packages/daydayup/README.md",
+  "homepage": "https://github.com/JiangWeixian/afu/packages/lunar/README.md",
   "keywords": [
     "alfred",
     "dayjs",
-    "daydayup"
+    "lunar"
   ],
   "files": [
     "index.js",
-    "utils.js",
+    "moonphase.js",
     "info.plist",
     "icon.png"
   ],
@@ -35,14 +35,15 @@
   "dependencies": {
     "alfy": "^0.10.0",
     "dayjs": "^1.8.36",
-    "lodash.isnan": "^3.0.2",
+    "solarlunar": "^2.0.7",
+    "suncalc": "^1.8.0",
     "tslib": "^2.0.1"
   },
   "devDependencies": {
     "@types/lodash.isnan": "^3.0.6",
+    "@types/suncalc": "^1.8.0",
     "alfy-test": "^0.4.0",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
-  },
-  "gitHead": "4a302133a123a80fa398e628df05bb341da9d5df"
+  }
 }
