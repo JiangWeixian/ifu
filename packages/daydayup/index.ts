@@ -48,6 +48,13 @@ const getInputMode = (input: string = '') => {
   return 'time'
 }
 
+const trim = (input: string) => {
+  if (!input) {
+    return input
+  }
+  return input.trim().replace(/[\n\t]/g, '')
+}
+
 const DEFAULT_FORMAT = 'YYYY-MM-DD HH:mm:ss'
 const DETAIL_FORMAT = 'YYYY-MM-DD HH:mm:ss.SSS'
 const WEEK_DAYS = ['周日', '周一', '周二', '周三', '周四', '周五', '周六']
@@ -126,22 +133,23 @@ const getTimeOutput = (value: string) => {
   ]
 }
 
-const mode = getInputMode(alfy.input)
+const input = trim(alfy.input)
+const mode = getInputMode(input)
 
 switch (mode) {
   case 'default':
     alfy.output(getDefaultOutput())
     break
   case 'string-duration':
-    const durations = parseStringDurations(alfy.input)
+    const durations = parseStringDurations(input)
     alfy.output(getDurationOutput('string', durations))
     break
   case 'number-duration':
-    const ms = alfy.input.split(' ')[1]
+    const ms = input.split(' ')[1]
     alfy.output(getDurationOutput('number', Number(ms)))
     break
   case 'time':
-    alfy.output(getTimeOutput(alfy.input))
+    alfy.output(getTimeOutput(input))
     break
   default:
     break
