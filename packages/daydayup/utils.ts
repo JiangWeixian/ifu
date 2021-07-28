@@ -1,5 +1,6 @@
 // time
-const DURATION_REGEX = /^(?:(\d+)(y))?(?:(\d+)(M))?(?:(\d+)(w))?(?:(\d+)(d))?(?:(\d+)(h))?(?:(\d+)(m))?(?:(\d+)(s))?(?:(\d+)(ms))?$/
+const DURATION_REGEX =
+  /^(?:(\d+)(y))?(?:(\d+)(M))?(?:(\d+)(w))?(?:(\d+)(d))?(?:(\d+)(h))?(?:(\d+)(m))?(?:(\d+)(s))?(?:(\d+)(ms))?$/
 const SHORTCUTS_TO_UNIT = {
   y: 'years',
   M: 'months',

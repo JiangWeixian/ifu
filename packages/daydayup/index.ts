@@ -35,7 +35,7 @@ const toItem = (
   }
 }
 
-const getInputMode = (input: string = '') => {
+const getInputMode = (input = '') => {
   if (input === ' ' || input === 'ls' || input === '.') {
     return 'default'
   }

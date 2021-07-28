@@ -17,7 +17,7 @@ test('main', async (t) => {
         copy: 'At 11:00 PM, Monday through Friday',
         largetype: 'At 11:00 PM, Monday through Friday',
       },
-        title: 'At 11:00 PM, Monday through Friday',
+      title: 'At 11:00 PM, Monday through Friday',
     },
   ])
 })

@@ -20,9 +20,9 @@ test('should support string durations', async (t) => {
 test('should parse string durations correct', async (t) => {
   const input = '1y1m1ms'
   t.deepEqual(utils.parseStringDurations(input), {
-    'years': 1,
-    'minutes': 1,
-    "milliseconds": 1,
+    years: 1,
+    minutes: 1,
+    milliseconds: 1,
   })
 })
 

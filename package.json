@@ -3,6 +3,19 @@
   "scripts": {
     "lint:fix": "eslint . --fix"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/**/*.{js,ts,vue,json}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "dayjs": "^1.8.36"
+  },
   "devDependencies": {
     "@aiou/eslint-config": "^0.1.3",
     "@changesets/cli": "^2.16.0",
@@ -15,17 +28,6 @@
   },
   "publishConfig": {
     "access": "public"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "**/**/*.{js|ts}": "eslint --fix"
-  },
-  "dependencies": {
-    "dayjs": "^1.8.36"
   },
   "config": {
     "commitizen": {
