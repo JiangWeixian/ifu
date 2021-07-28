@@ -1,0 +1,60 @@
+{
+  "name": "@ifu/emoji",
+  "version": "1.0.0",
+  "description": "alfred workflow template",
+  "keywords": [
+    "alfred",
+    "emoji",
+    "fuzzy-search"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JiangWeixian/emoji",
+    "directory": "packages/emoji"
+  },
+  "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
+  "files": [
+    "index.js",
+    "info.plist",
+    "icon.png"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "build": "tsc",
+    "pretest": "pnpm run build",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/JiangWeixian/emoji#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/**/*.{js,ts,vue,json}": [
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "alfy": "^0.10.0",
+    "fuzzy-emoji": "^1.0.2",
+    "tslib": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/lodash.isnan": "^3.0.6",
+    "alfy-test": "^0.4.0",
+    "ava": "^3.12.1",
+    "typescript": "^4.0.2"
+  },
+  "gitHead": "4a302133a123a80fa398e628df05bb341da9d5df",
+  "bugs": {
+    "url": "https://github.com/JiangWeixian/emoji/issues",
+    "email": "jiangweixian1994@gmail.com"
+  }
+}

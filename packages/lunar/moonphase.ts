@@ -41,7 +41,8 @@ const step = function (phase: number) {
   }, 0)
 
   phase *= weight
-  for (var rv = 0; rv < phases.length; rv++) {
+  let rv = 0
+  for (rv = 0; rv < phases.length; rv++) {
     phase -= phases[rv].weight
     if (phase <= 0) {
       break

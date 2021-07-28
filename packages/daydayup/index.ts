@@ -96,7 +96,7 @@ const getDefaultOutput = (value?: string) => {
   ]
 }
 
-const getDurationOutput = (type: 'string' | 'number' = 'string', value: object | number) => {
+const getDurationOutput = (type: 'string' | 'number' = 'string', value: any) => {
   const duration = type === 'string' ? dayjs.duration(value) : dayjs.duration(value)
   const ms = duration.asMilliseconds()
   const now = dayjs()
@@ -135,17 +135,17 @@ const getTimeOutput = (value: string) => {
 
 const input = trim(alfy.input)
 const mode = getInputMode(input)
+const durations = parseStringDurations(input)
+const ms = input.split(' ')[1]
 
 switch (mode) {
   case 'default':
     alfy.output(getDefaultOutput())
     break
   case 'string-duration':
-    const durations = parseStringDurations(input)
     alfy.output(getDurationOutput('string', durations))
     break
   case 'number-duration':
-    const ms = input.split(' ')[1]
     alfy.output(getDurationOutput('number', Number(ms)))
     break
   case 'time':
