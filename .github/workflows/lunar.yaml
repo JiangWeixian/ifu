@@ -1,0 +1,24 @@
+on:
+  push:
+    paths:
+      - 'packages/lunar/**'
+    branches: [master]
+  pull_request:
+    paths:
+      - 'packages/lunar/**'
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: 'ubuntu-18.04'
+    name: lunar
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout
+        run: |
+          yarn
+        working-directory: ./packages/lunar
+      - name: Test
+        run: |
+          yarn test
+        working-directory: ./packages/lunar

@@ -1,0 +1,24 @@
+on:
+  push:
+    paths:
+      - 'packages/emoji/**'
+    branches: [master]
+  pull_request:
+    paths:
+      - 'packages/emoji/**'
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: 'ubuntu-18.04'
+    name: emoji
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout
+        run: |
+          yarn
+        working-directory: ./packages/emoji
+      - name: Test
+        run: |
+          yarn test
+        working-directory: ./packages/emoji

@@ -1,0 +1,24 @@
+on:
+  push:
+    paths:
+      - 'packages/daydayup/**'
+    branches: [master]
+  pull_request:
+    paths:
+      - 'packages/daydayup/**'
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: 'ubuntu-18.04'
+    name: daydayup
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout
+        run: |
+          yarn
+        working-directory: ./packages/daydayup
+      - name: Test
+        run: |
+          yarn test
+        working-directory: ./packages/daydayup
