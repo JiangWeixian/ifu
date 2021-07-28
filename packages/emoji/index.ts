@@ -19,8 +19,12 @@ const toItem = (
   }
 }
 
-const result = fuzzysearch.search(alfy.input)
-const output = result
-  .slice(0, 10)
-  .map((item) => toItem(item.emoji, { title: item.names[0], subtitle: item.description }))
-alfy.output(output)
+const main = async () => {
+  const result = fuzzysearch.search(alfy.input)
+  const output = result
+    .slice(0, 10)
+    .map((item) => toItem(item.emoji, { title: item.names[0], subtitle: item.description }))
+  alfy.output(output)
+}
+
+await main()

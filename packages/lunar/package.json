@@ -33,7 +33,7 @@
     "access": "public"
   },
   "dependencies": {
-    "alfy": "^0.10.0",
+    "alfy": "^0.11.1",
     "dayjs": "^1.8.36",
     "solarlunar": "^2.0.7",
     "suncalc": "^1.8.0",

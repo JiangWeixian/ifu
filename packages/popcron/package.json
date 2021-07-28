@@ -34,7 +34,7 @@
     "node": ">=8"
   },
   "dependencies": {
-    "alfy": "^0.10.0",
+    "alfy": "^0.11.1",
     "cronstrue": "^1.100.0",
     "lodash.uniqby": "^4.7.0",
     "tslib": "^2.0.1"
