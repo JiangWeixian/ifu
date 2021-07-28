@@ -1,6 +1,6 @@
 {
   "name": "@ifu/emoji",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "alfred workflow template",
   "keywords": [
     "alfred",
@@ -14,6 +14,7 @@
     "directory": "packages/emoji"
   },
   "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
+  "type": "module",
   "files": [
     "index.js",
     "info.plist",
@@ -43,7 +44,7 @@
   },
   "dependencies": {
     "alfy": "^0.10.0",
-    "fuzzy-emoji": "^1.0.2",
+    "fuzzy-emoji": "^1.0.3",
     "tslib": "^2.0.1"
   },
   "devDependencies": {
