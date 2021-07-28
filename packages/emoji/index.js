@@ -16425,7 +16425,7 @@ var toItem = function (value, _a) {
 var result = fuzzysearch.search((external_alfy_default()).input);
 var output = result
     .slice(0, 10)
-    .map(function (item) { return toItem(item.emoji, { title: item.names[0], subtitle: item.description }); });
+    .map(function (item) { return toItem(item.emoji, { title: item.emoji + " :" + item.names[0] + ":", subtitle: item.description }); });
 external_alfy_default().output(output);
 
 })();

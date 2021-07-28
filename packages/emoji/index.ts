@@ -22,5 +22,7 @@ const toItem = (
 const result = fuzzysearch.search(alfy.input)
 const output = result
   .slice(0, 10)
-  .map((item) => toItem(item.emoji, { title: item.names[0], subtitle: item.description }))
+  .map((item) =>
+    toItem(item.emoji, { title: `${item.emoji} :${item.names[0]}:`, subtitle: item.description }),
+  )
 alfy.output(output)
