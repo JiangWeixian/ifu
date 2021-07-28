@@ -19,7 +19,6 @@
     "email": "jiangweixian1994@gmail.com"
   },
   "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
-  "type": "module",
   "files": [
     "index.js",
     "info.plist",
@@ -28,7 +27,7 @@
   "main": "index.js",
   "scripts": {
     "test": "ava",
-    "build": "tsc",
+    "build": "ncc build index.ts -e alfy -o .",
     "pretest": "pnpm run build",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
@@ -53,6 +52,7 @@
   },
   "devDependencies": {
     "@types/lodash.isnan": "^3.0.6",
+    "@vercel/ncc": "^0.29.0",
     "alfy-test": "^0.4.0",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"

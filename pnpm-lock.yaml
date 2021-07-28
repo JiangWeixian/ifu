@@ -51,6 +51,7 @@ importers:
   packages/emoji:
     specifiers:
       '@types/lodash.isnan': ^3.0.6
+      '@vercel/ncc': ^0.29.0
       alfy: ^0.11.1
       alfy-test: ^0.4.0
       ava: ^3.12.1
@@ -63,6 +64,7 @@ importers:
       tslib: 2.3.0
     devDependencies:
       '@types/lodash.isnan': 3.0.6
+      '@vercel/ncc': 0.29.0
       alfy-test: 0.4.2
       ava: 3.15.0
       typescript: 4.3.5
@@ -843,6 +845,11 @@ packages:
     dependencies:
       '@typescript-eslint/types': 4.28.5
       eslint-visitor-keys: 2.1.0
+    dev: true
+
+  /@vercel/ncc/0.29.0:
+    resolution: {integrity: sha512-p+sB835wOSDdgm2mgFgSOcXJF84AqZ+vBEnnGS0sm8veA92Hia7sqH0qEnqeFilPl+cXtxbdh2er+WdlfbVCZA==}
+    hasBin: true
     dev: true
 
   /acorn-jsx/5.3.2_acorn@7.4.1:
