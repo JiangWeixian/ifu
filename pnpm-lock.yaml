@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@aiou/eslint-config': ^0.1.3
+      '@aiou/eslint-config': ^0.1.4
       '@changesets/cli': ^2.16.0
       '@types/node': ^14.6.4
       dayjs: ^1.8.36
@@ -16,7 +16,7 @@ importers:
     dependencies:
       dayjs: 1.10.6
     devDependencies:
-      '@aiou/eslint-config': 0.1.3_6d1d11887b9cbae1e08211bfa93afba1
+      '@aiou/eslint-config': 0.1.4_6d1d11887b9cbae1e08211bfa93afba1
       '@changesets/cli': 2.16.0
       '@types/node': 14.17.6
       eslint: 7.31.0
@@ -113,8 +113,8 @@ importers:
 
 packages:
 
-  /@aiou/eslint-config-basic/0.1.1_eslint@7.31.0:
-    resolution: {integrity: sha512-BAoJrNaCQ1DRxHg/KUUpdurBbsruE1uaRDzqTSEcQNtEy+srth9g0GZpTRAS35GHBXbLP2tGiN64K5J9PMbsaw==}
+  /@aiou/eslint-config-basic/0.1.3_eslint@7.31.0:
+    resolution: {integrity: sha512-HUoOfsRD3+uV7aHxAIgKm/BumiOFhF4qE6ifEF85WexEFukz5v56G5sscVrCMoOM2GJ6z36Pqy7IkdtzDmJ4XQ==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -134,12 +134,12 @@ packages:
       - supports-color
     dev: true
 
-  /@aiou/eslint-config-react/0.1.0_eslint@7.31.0:
-    resolution: {integrity: sha512-/+lj4Pt/tTI1iA9mjvIL6kw6sU6ERITw/X5OueLtTOhqyL9x4+vPgUvTgxOWwXpQugH1+VAi4aE96YzCUdrlAQ==}
+  /@aiou/eslint-config-react/0.1.1_eslint@7.31.0:
+    resolution: {integrity: sha512-utuWMFjIEmImFFaZKoTS3HmSMOr5QIRUy7IDtaknXPUgMqoqhZDHGp4uodssx+R2hHhlMDRLiiFW2H5ymVcqXw==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
-      '@aiou/eslint-config-ts': 0.1.0_eslint@7.31.0
+      '@aiou/eslint-config-ts': 0.1.1_eslint@7.31.0
       eslint: 7.31.0
       eslint-plugin-react: 7.24.0_eslint@7.31.0
       eslint-plugin-react-hooks: 4.2.0_eslint@7.31.0
@@ -148,13 +148,13 @@ packages:
       - typescript
     dev: true
 
-  /@aiou/eslint-config-ts/0.1.0_eslint@7.31.0:
-    resolution: {integrity: sha512-94xq6LZqNxGFfQOxq5dG3o2eD+d1zw3eJV9CKR7efSCrEygywQrASJT8Zon1J6h/n5df5rZNWd1dMZ3S0lLRaA==}
+  /@aiou/eslint-config-ts/0.1.1_eslint@7.31.0:
+    resolution: {integrity: sha512-ptDm387AVTxXMQo8JRHKDrPUz0/HOPCZ2o7vuJfLmYaWig7Z/LN8y2G1tIoPcJDEiVow/YsAK+m/Hb1SC2HENQ==}
     peerDependencies:
       eslint: '>=7.4.0'
       typescript: '>=3.9'
     dependencies:
-      '@aiou/eslint-config-basic': 0.1.1_eslint@7.31.0
+      '@aiou/eslint-config-basic': 0.1.3_eslint@7.31.0
       '@typescript-eslint/eslint-plugin': 4.28.5_b121c633c473862f790ae30ff0479b86
       '@typescript-eslint/parser': 4.28.5_eslint@7.31.0
       eslint: 7.31.0
@@ -162,15 +162,15 @@ packages:
       - supports-color
     dev: true
 
-  /@aiou/eslint-config/0.1.3_6d1d11887b9cbae1e08211bfa93afba1:
-    resolution: {integrity: sha512-UEQIjG8KUW5GNLBN/6nzJfZXl/A41KaYN9hyoIi+j7M5ZhYCXMiDJBYa6ZGYqoI8AYoKjAAd4DpiSp5s4z5Mpg==}
+  /@aiou/eslint-config/0.1.4_6d1d11887b9cbae1e08211bfa93afba1:
+    resolution: {integrity: sha512-Z6aWuPRYp1g0qo/KUXPNWBzeEtSc1mgFDdVSMXt35UXyJ07Rez/Mlga9NaxQoa1uIvoIBlx+nz8uRLjD6XQgtQ==}
     peerDependencies:
       eslint: '>=7.4.0'
       prettier: '>=2.2.1'
       pretty-quick: '>=3.1.0'
     dependencies:
-      '@aiou/eslint-config-react': 0.1.0_eslint@7.31.0
-      '@aiou/eslint-plugin-progress': 0.1.4_eslint@7.31.0
+      '@aiou/eslint-config-react': 0.1.1_eslint@7.31.0
+      '@aiou/eslint-plugin-progress': 0.1.5_eslint@7.31.0
       eslint: 7.31.0
       eslint-config-prettier: 8.3.0_eslint@7.31.0
       eslint-plugin-prettier: 3.4.0_19f511d6aa08b367b6cb59e8f50291ca
@@ -181,8 +181,8 @@ packages:
       - typescript
     dev: true
 
-  /@aiou/eslint-plugin-progress/0.1.4_eslint@7.31.0:
-    resolution: {integrity: sha512-EnWSun+WbohpmGAz1fMRK4aQ2konENMoHYjS8u1SbWe3opZeGbF8oeEtjHzMn7nTx5vdS5RvAzss49jgjIy//Q==}
+  /@aiou/eslint-plugin-progress/0.1.5_eslint@7.31.0:
+    resolution: {integrity: sha512-dtIsXamv3RLtwVS4kjPValWVo/pHhPXLvqysxl3qBPM/hW+jA/wfTDmm7MJzvrN7jvpux9hrVii3PanfA2jJqw==}
     peerDependencies:
       eslint: '>=7.4.0'
     dependencies:
@@ -1286,7 +1286,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001247
+      caniuse-lite: 1.0.30001248
       colorette: 1.2.2
       electron-to-chromium: 1.3.789
       escalade: 3.1.1
@@ -1367,8 +1367,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /caniuse-lite/1.0.30001247:
-    resolution: {integrity: sha512-4rS7co+7+AoOSPRPOPUt5/GdaqZc0EsUpWk66ofE3HJTAajUK2Ss2VwoNzVN69ghg8lYYlh0an0Iy4LIHHo9UQ==}
+  /caniuse-lite/1.0.30001248:
+    resolution: {integrity: sha512-NwlQbJkxUFJ8nMErnGtT0QTM2TJ33xgz4KXJSMIrjXIbDVdaYueGyjOrLKRtJC+rTiWfi6j5cnZN1NBiSBJGNw==}
     dev: true
 
   /capture-stack-trace/1.0.1:

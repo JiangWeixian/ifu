@@ -8,6 +8,7 @@
     "daydayup"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/JiangWeixian/afu/packages/daydayup/README.md",
   "repository": {
     "directory": "daydayup",
     "type": "git",
@@ -31,7 +32,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/JiangWeixian/afu/packages/daydayup/README.md",
   "dependencies": {
     "alfy": "^0.10.0",
     "dayjs": "^1.8.36",

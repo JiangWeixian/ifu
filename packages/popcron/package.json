@@ -8,6 +8,7 @@
     "popcron"
   ],
   "license": "MIT",
+  "homepage": "https://github.com/JiangWeixian/afu/packages/popcron/README.md",
   "repository": {
     "directory": "popcron",
     "type": "git",
@@ -29,7 +30,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "homepage": "https://github.com/JiangWeixian/afu/packages/popcron/README.md",
   "engines": {
     "node": ">=8"
   },
