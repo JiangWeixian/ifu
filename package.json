@@ -1,15 +1,17 @@
 {
   "name": "ifu",
+  "version": "",
   "scripts": {
-    "lint:fix": "eslint . --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "lint:fix": "eslint . --fix",
+    "build": "pnpm build -r",
+    "ci:publish": "pnpm run build && pnpx changeset publish",
+    "ci:version": "pnpx changeset version",
+    "ci:snapshot": "pnpx changeset version --snapshot beta",
+    "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
+    "prepare": "husky install"
   },
   "lint-staged": {
-    "**/**/*.{js,ts,vue,json}": [
+    "**/**/*.{js,ts,tsx,vue,json}": [
       "eslint --fix"
     ]
   },
@@ -22,7 +24,7 @@
     "@changesets/cli": "^2.16.0",
     "@types/node": "^14.6.4",
     "eslint": "^7.31.0",
-    "husky": "^4.2.5",
+    "husky": "^7.0.0",
     "lint-staged": "^11.1.1",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.0"
