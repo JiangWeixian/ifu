@@ -25,9 +25,7 @@
   "scripts": {
     "test": "ava",
     "build": "tsc",
-    "pretest": "npm run build",
-    "postinstall": "alfy-init",
-    "preuninstall": "alfy-cleanup"
+    "pretest": "npm run build"
   },
   "publishConfig": {
     "access": "public"

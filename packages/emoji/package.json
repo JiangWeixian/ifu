@@ -28,9 +28,7 @@
   "scripts": {
     "test": "ava",
     "build": "ncc build index.ts -e alfy -o .",
-    "pretest": "pnpm run build",
-    "postinstall": "alfy-init",
-    "preuninstall": "alfy-cleanup"
+    "pretest": "pnpm run build"
   },
   "publishConfig": {
     "access": "public"
