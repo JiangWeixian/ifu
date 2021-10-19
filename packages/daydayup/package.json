@@ -24,9 +24,7 @@
   "main": "index.js",
   "scripts": {
     "test": "pnpm run build && ava",
-    "build": "tsc",
-    "postinstall": "alfy-init",
-    "preuninstall": "alfy-cleanup"
+    "build": "tsc"
   },
   "publishConfig": {
     "access": "public"
