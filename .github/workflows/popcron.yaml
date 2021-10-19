@@ -14,11 +14,11 @@ jobs:
     name: Popcron
     steps:
       - uses: actions/checkout@v2
-      - name: Checkout
-        run: |
-          yarn
-        working-directory: ./packages/popcron
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: install dependencies
+        run: pnpm install --frozen-lockfile=false
       - name: Test
         run: |
-          yarn test
+          pnpm test
         working-directory: ./packages/popcron
