@@ -23,9 +23,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "ava",
+    "test": "pnpm run build && ava",
     "build": "tsc",
-    "pretest": "npm run build",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },

@@ -14,11 +14,12 @@ jobs:
     name: daydayup
     steps:
       - uses: actions/checkout@v2
-      - name: Checkout
-        run: |
-          yarn
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: install dependencies
+        run: pnpm install --frozen-lockfile=false
         working-directory: ./packages/daydayup
       - name: Test
         run: |
-          yarn test
+          pnpm test
         working-directory: ./packages/daydayup
