@@ -18,8 +18,6 @@ jobs:
         run: npm i pnpm@latest -g
       - name: install dependencies
         run: pnpm install --filter=./packages/daydayup --frozen-lockfile=false
-        working-directory: ./packages/daydayup
       - name: Test
         run: |
-          pnpm test
-        working-directory: ./packages/daydayup
+          pnpm test --filter=./packages/daydayup
