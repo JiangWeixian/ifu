@@ -18,6 +18,9 @@
     "email": "jiangweixian1994@gmail.com",
     "url": "https://twitter.com/jiangweixian"
   },
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "module": "lib/index.js",
   "bin": {
@@ -46,6 +49,7 @@
   "devDependencies": {
     "@aiou/eslint-config": "0.2.1",
     "@changesets/cli": "^2.16.0",
+    "@ifu/cli": "workspace:^0.0.2",
     "@types/download": "8.0.1",
     "@types/fs-extra": "9.0.12",
     "@types/inquirer": "7.3.3",

@@ -33,6 +33,7 @@ importers:
     specifiers:
       '@aiou/eslint-config': 0.2.1
       '@changesets/cli': ^2.16.0
+      '@ifu/cli': workspace:^0.0.2
       '@types/download': 8.0.1
       '@types/fs-extra': 9.0.12
       '@types/inquirer': 7.3.3
@@ -61,6 +62,7 @@ importers:
     devDependencies:
       '@aiou/eslint-config': 0.2.1_b0fc0f52cd18fae8b0264e3331916636
       '@changesets/cli': 2.16.0
+      '@ifu/cli': 'link:'
       '@types/download': 8.0.1
       '@types/fs-extra': 9.0.12
       '@types/inquirer': 7.3.3
@@ -82,6 +84,7 @@ importers:
 
   packages/daydayup:
     specifiers:
+      '@ifu/cli': workspace:^0.0.2
       '@types/lodash.isnan': ^3.0.6
       alfy: ^0.11.1
       alfy-test: ^0.4.0
@@ -96,6 +99,7 @@ importers:
       lodash.isnan: 3.0.2
       tslib: 2.3.0
     devDependencies:
+      '@ifu/cli': link:../cli
       '@types/lodash.isnan': 3.0.6
       alfy-test: 0.4.2
       ava: 3.15.0
@@ -103,6 +107,7 @@ importers:
 
   packages/emoji:
     specifiers:
+      '@ifu/cli': workspace:^0.0.2
       '@types/lodash.isnan': ^3.0.6
       '@vercel/ncc': ^0.29.0
       alfy: ^0.11.1
@@ -116,6 +121,7 @@ importers:
       fuzzy-emoji: 1.0.4
       tslib: 2.3.0
     devDependencies:
+      '@ifu/cli': link:../cli
       '@types/lodash.isnan': 3.0.6
       '@vercel/ncc': 0.29.0
       alfy-test: 0.4.2
@@ -124,6 +130,7 @@ importers:
 
   packages/lunar:
     specifiers:
+      '@ifu/cli': workspace:^0.0.2
       '@types/lodash.isnan': ^3.0.6
       '@types/suncalc': ^1.8.0
       alfy: ^0.11.1
@@ -141,6 +148,7 @@ importers:
       suncalc: 1.8.0
       tslib: 2.3.0
     devDependencies:
+      '@ifu/cli': link:../cli
       '@types/lodash.isnan': 3.0.6
       '@types/suncalc': 1.8.0
       alfy-test: 0.4.2
@@ -149,6 +157,7 @@ importers:
 
   packages/popcron:
     specifiers:
+      '@ifu/cli': workspace:^0.0.2
       '@types/lodash.uniqby': ^4.7.6
       alfy: ^0.11.1
       alfy-test: ^0.4.0
@@ -163,6 +172,7 @@ importers:
       lodash.uniqby: 4.7.0
       tslib: 2.3.0
     devDependencies:
+      '@ifu/cli': link:../cli
       '@types/lodash.uniqby': 4.7.6
       alfy-test: 0.4.2
       ava: 3.15.0

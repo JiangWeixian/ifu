@@ -11,7 +11,13 @@ describe('version', () => {
   })
 
   it('check install should work', async () => {
-    const { stdout } = await execa.node(cli, ['-c'])
-    console.log(stdout)
+    const { exitCode } = await execa
+      .node(cli, ['-c'], { stderr: 'inherit' })
+      .catch(() => ({ exitCode: 1 }))
+    if (process.platform === 'darwin') {
+      expect(exitCode).toBe(1)
+    } else {
+      expect(exitCode).toBe(0)
+    }
   })
 })
