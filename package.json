@@ -22,7 +22,6 @@
   "devDependencies": {
     "@aiou/eslint-config": "^0.2.2",
     "@changesets/cli": "^2.16.0",
-    "@ifu/cli": "workspace:^0.0.2",
     "@types/node": "^14.6.4",
     "eslint": "^7.31.0",
     "husky": "^7.0.0",
