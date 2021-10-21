@@ -18,10 +18,10 @@
     "email": "jiangweixian1994@gmail.com",
     "url": "https://twitter.com/jiangweixian"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "lib/index.js",
   "bin": {
-    "ifu": "dist/cli.js"
+    "ifu": "lib/cli.js"
   },
   "scripts": {
     "prebuild": "rimraf lib",
