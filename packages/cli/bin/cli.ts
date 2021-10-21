@@ -8,9 +8,10 @@ const cli = program.version(require('../package.json').version).name('bin-templa
 cli.option('-c, --check', 'check is alfred installed').action(() => {
   if (!isInstallAlfred()) {
     logger.log('alfred is not installed')
-    process.exit(1)
+    process.exit(0)
   }
   logger.log('alfred is installed')
+  process.exit(1)
 })
 
 program.parse(process.argv)

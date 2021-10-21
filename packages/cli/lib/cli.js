@@ -9,8 +9,9 @@ var cli = commander_1.program.version(require('../package.json').version).name('
 cli.option('-c, --check', 'check is alfred installed').action(function () {
     if (!index_1.isInstallAlfred()) {
         logger_1.default.log('alfred is not installed');
-        process.exit(1);
+        process.exit(0);
     }
     logger_1.default.log('alfred is installed');
+    process.exit(1);
 });
 commander_1.program.parse(process.argv);
