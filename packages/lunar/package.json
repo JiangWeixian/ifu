@@ -40,7 +40,7 @@
     "tslib": "^2.0.1"
   },
   "devDependencies": {
-    "@ifu/cli": "workspace:^0.0.2",
+    "@ifu/cli": "workspace:^0.0.3",
     "@types/lodash.isnan": "^3.0.6",
     "@types/suncalc": "^1.8.0",
     "alfy-test": "^0.4.0",

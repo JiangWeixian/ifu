@@ -1,5 +1,11 @@
 # @ifu/cli
 
+## 0.0.3
+
+### Patch Changes
+
+- 89029db: less files
+
 ## 0.0.2
 
 ### Patch Changes
