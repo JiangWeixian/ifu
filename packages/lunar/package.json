@@ -26,7 +26,6 @@
     "test": "ava",
     "build": "tsc",
     "pretest": "npm run build",
-    "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
   "publishConfig": {

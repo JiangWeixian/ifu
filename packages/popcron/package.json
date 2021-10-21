@@ -24,7 +24,6 @@
   "scripts": {
     "test": "ava",
     "build": "tsc",
-    "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup"
   },
   "publishConfig": {
