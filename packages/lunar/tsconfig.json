@@ -16,6 +16,5 @@
     "noUnusedLocals": true,
     "baseUrl": ".",
     "downlevelIteration": true
-  },
-  "exclude": ["node_modules", "lib", "test", "utils"]
+  }
 }

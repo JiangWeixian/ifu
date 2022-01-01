@@ -1,4 +1,7 @@
-export const shortcuts = [
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.shortcuts = void 0;
+exports.shortcuts = [
     {
         url: 'https://repo.new',
         name: 'Github Repo',
