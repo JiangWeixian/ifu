@@ -165,11 +165,11 @@ importers:
       typescript: ^4.0.2
       typescript-transform-extensions: ^1.0.1
     dependencies:
+      '@ifu/cli': link:../cli
       alfy: 0.12.2
     devDependencies:
       '@aiou/eslint-config': 0.3.2_b0fc0f52cd18fae8b0264e3331916636
       '@changesets/cli': 2.16.0
-      '@ifu/cli': link:../cli
       '@types/lodash.isnan': 3.0.6
       alfy-test: 0.4.2
       ava: 3.15.0
