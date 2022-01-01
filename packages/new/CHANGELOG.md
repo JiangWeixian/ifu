@@ -1,5 +1,11 @@
 # @ifu/new
 
+## 0.2.0
+
+### Minor Changes
+
+- 59ca694: upgrade constants list, more shortcuts
+
 ## 0.1.0
 
 ### Minor Changes
