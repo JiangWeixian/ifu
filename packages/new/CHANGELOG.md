@@ -1,5 +1,11 @@
 # @ifu/new
 
+## 0.0.5
+
+### Patch Changes
+
+- 3439d6a: open url
+
 ## 0.0.4
 
 ### Patch Changes
