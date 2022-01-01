@@ -49,7 +49,7 @@
   "devDependencies": {
     "@aiou/eslint-config": "latest",
     "@changesets/cli": "^2.16.0",
-    "@ifu/cli": "^0.0.3",
+    "@ifu/cli": "workspace:^0.0.3",
     "@types/lodash.isnan": "^3.0.6",
     "alfy-test": "^0.4.2",
     "ava": "^3.12.1",

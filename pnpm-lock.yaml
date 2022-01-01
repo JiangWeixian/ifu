@@ -150,7 +150,7 @@ importers:
     specifiers:
       '@aiou/eslint-config': latest
       '@changesets/cli': ^2.16.0
-      '@ifu/cli': ^0.0.3
+      '@ifu/cli': workspace:^0.0.3
       '@types/lodash.isnan': ^3.0.6
       alfy: ^0.12.2
       alfy-test: ^0.4.2
