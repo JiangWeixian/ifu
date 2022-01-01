@@ -1,5 +1,11 @@
 # @ifu/new
 
+## 0.1.0
+
+### Minor Changes
+
+- e253f75: fuzzy search shortcuts
+
 ## 0.0.5
 
 ### Patch Changes
