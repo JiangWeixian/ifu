@@ -24,7 +24,7 @@
   ],
   "exports": "./index.js",
   "scripts": {
-    "test": "ava",
+    "test": "pnpm run build && ava",
     "build": "ttsc",
     "postinstall": "ifu -c || alfy-init",
     "preuninstall": "alfy-cleanup"
@@ -43,7 +43,6 @@
   },
   "devDependencies": {
     "@types/lodash.uniqby": "^4.7.6",
-    "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
   }

@@ -1,4 +1,4 @@
-import cronstrue from 'cronstrue/i18n'
+import cronstrue from 'cronstrue/i18n.js'
 import alfy from 'alfy'
 import uniqby from 'lodash.uniqby'
 

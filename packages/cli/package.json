@@ -50,7 +50,6 @@
     "@types/jest": "^27.0.2",
     "@types/node": "16.3.3",
     "@types/rimraf": "3.0.1",
-    "alfy-test": "^0.4.2",
     "cz-emoji": "^1.3.1",
     "execa": "^5.1.1",
     "jest": "^27.3.1",

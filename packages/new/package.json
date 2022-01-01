@@ -58,7 +58,6 @@
     "@aiou/eslint-config": "latest",
     "@changesets/cli": "^2.16.0",
     "@types/lodash.isnan": "^3.0.6",
-    "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
     "eslint": "^7.x",
     "esm": "^3.2.25",

@@ -6,7 +6,14 @@
 ![ifu](https://user-images.githubusercontent.com/6839576/147843066-35f0fd83-0f2e-431e-ae15-a117616fba88.png)
 
 
-## For Developers
+## development
+
+**alfy-test** not support `.mjs` now, you should patch `run-node.sh`
+
+```sh
++ node "@"
+- ESM_OPTIONS='{"await":true}' node --require esm "$@"
+```
 
 - [alfy](https://github.com/sindresorhus/alfy)
 - [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/)
