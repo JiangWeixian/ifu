@@ -1,9 +1,9 @@
 import alfy from 'alfy'
 
-import data from './new.json'
+import { shortcuts } from './constants'
 
 alfy.output(
-  data.map((item) => {
+  shortcuts.map((item) => {
     return {
       title: item.name,
       autocomplete: item.name,
