@@ -6,10 +6,8 @@ alfy.output(
   shortcuts.map((item) => {
     return {
       title: item.name,
-      autocomplete: item.name,
-      action: {
-        url: item.url,
-      },
+      subtitle: item.name,
+      action: item.url,
     }
   }),
 )
