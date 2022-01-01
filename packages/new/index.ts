@@ -5,7 +5,7 @@ import { shortcuts } from './constants'
 
 const searcher = new FuzzySearch(shortcuts, ['name'])
 
-const results = searcher.search(alfy.input)
+const results = alfy.input ? searcher.search(alfy.input) : shortcuts
 
 alfy.output(
   results.map((item) => {

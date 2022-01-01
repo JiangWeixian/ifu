@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "description": "new script from alfred",
   "keywords": [
+    "ifu",
     "alfred",
     "new",
-    "script"
+    "shortcuts"
   ],
   "license": "MIT",
   "homepage": "https://github.com/JiangWeixian/ifu#readme",
@@ -45,6 +46,9 @@
     "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
     "lint:fix": "eslint . --fix"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
     "alfy": "^0.12.2",
@@ -54,16 +58,12 @@
     "@aiou/eslint-config": "latest",
     "@changesets/cli": "^2.16.0",
     "@types/lodash.isnan": "^3.0.6",
-    "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
     "eslint": "^7.x",
     "esm": "^3.2.25",
     "husky": "^7.0.0",
     "lint-staged": "^11.1.0",
     "prettier": "^2.3.2",
-    "tsc-progress": "^1.0.1",
-    "ttypescript": "^1.5.13",
-    "typescript": "^4.0.2",
-    "typescript-transform-extensions": "^1.0.1"
+    "typescript": "^4.0.2"
   }
 }

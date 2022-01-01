@@ -1,12 +1,12 @@
 import alfy from 'alfy'
 import dayjs from 'dayjs'
 import isNaN from 'lodash.isnan'
-import WeekOfYear from 'dayjs/plugin/weekOfYear'
-import IsLeapYear from 'dayjs/plugin/isLeapYear'
-import DayOfYear from 'dayjs/plugin/dayOfYear'
-import QuarterOfYear from 'dayjs/plugin/quarterOfYear'
-import Duration from 'dayjs/plugin/duration'
-import RelativeTime from 'dayjs/plugin/relativeTime'
+import WeekOfYear from 'dayjs/plugin/weekOfYear.js'
+import IsLeapYear from 'dayjs/plugin/isLeapYear.js'
+import DayOfYear from 'dayjs/plugin/dayOfYear.js'
+import QuarterOfYear from 'dayjs/plugin/quarterOfYear.js'
+import Duration from 'dayjs/plugin/duration.js'
+import RelativeTime from 'dayjs/plugin/relativeTime.js'
 
 import { isStringDuration, parseStringDurations } from './utils'
 

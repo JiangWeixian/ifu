@@ -1,33 +1,34 @@
 {
   "name": "@ifu/emoji",
   "version": "1.0.6",
-  "description": "alfred workflow template",
+  "description": "fuzzy search emoji",
   "keywords": [
     "alfred",
     "emoji",
     "fuzzy-search"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/JiangWeixian/emoji#readme",
+  "homepage": "https://github.com/JiangWeixian/ifu#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JiangWeixian/emoji",
+    "url": "https://github.com/JiangWeixian/ifu",
     "directory": "packages/emoji"
   },
   "bugs": {
-    "url": "https://github.com/JiangWeixian/emoji/issues",
+    "url": "https://github.com/JiangWeixian/ifu/issues",
     "email": "jiangweixian1994@gmail.com"
   },
   "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
+  "type": "module",
   "files": [
     "index.js",
     "info.plist",
     "icon.png"
   ],
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "test": "ava",
-    "build": "ncc build index.ts -e alfy -o .",
+    "build": "ttsc",
     "postinstall": "ifu -c || alfy-init",
     "pretest": "pnpm run build",
     "preuninstall": "alfy-cleanup"
@@ -36,15 +37,13 @@
     "access": "public"
   },
   "dependencies": {
-    "alfy": "^0.11.1",
-    "fuzzy-emoji": "^1.0.4",
-    "tslib": "^2.0.1"
+    "@ifu/cli": "workspace:^0.0.3",
+    "alfy": "^0.12.2",
+    "fuzzy-emoji": "^1.0.4"
   },
   "devDependencies": {
-    "@ifu/cli": "workspace:^0.0.3",
     "@types/lodash.isnan": "^3.0.6",
-    "@vercel/ncc": "^0.29.0",
-    "alfy-test": "^0.4.0",
+    "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
   }

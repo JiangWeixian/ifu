@@ -8,42 +8,44 @@
     "lunar"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/JiangWeixian/afu/packages/lunar/README.md",
+  "homepage": "https://github.com/JiangWeixian/ifu#readme",
   "repository": {
-    "directory": "lunar",
+    "directory": "packages/lunar",
     "type": "git",
-    "url": "https://github.com/JiangWeixian/afu"
+    "url": "https://github.com/JiangWeixian/ifu"
   },
   "author": "JiangWeixian",
+  "type": "module",
   "files": [
     "index.js",
     "moonphase.js",
     "info.plist",
     "icon.png"
   ],
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "test": "ava",
-    "build": "tsc",
+    "build": "ttsc",
     "postinstall": "ifu -c || alfy-init",
     "pretest": "npm run build",
     "preuninstall": "alfy-cleanup"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "alfy": "^0.11.1",
+    "@ifu/cli": "workspace:^0.0.3",
+    "alfy": "^0.12.2",
     "dayjs": "^1.8.36",
     "solarlunar": "^2.0.7",
-    "suncalc": "^1.8.0",
-    "tslib": "^2.0.1"
+    "suncalc": "^1.8.0"
   },
   "devDependencies": {
-    "@ifu/cli": "workspace:^0.0.3",
     "@types/lodash.isnan": "^3.0.6",
     "@types/suncalc": "^1.8.0",
-    "alfy-test": "^0.4.0",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
   }
