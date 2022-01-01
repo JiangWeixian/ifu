@@ -25,18 +25,20 @@
   "exports": "./index.js",
   "scripts": {
     "test": "pnpm run build && ava",
-    "build": "tsc",
+    "build": "ttsc",
     "postinstall": "ifu -c || alfy-init",
     "preuninstall": "alfy-cleanup"
   },
   "publishConfig": {
     "access": "public"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "dependencies": {
     "alfy": "^0.11.1",
     "dayjs": "^1.8.36",
-    "lodash.isnan": "^3.0.2",
-    "tslib": "^2.0.1"
+    "lodash.isnan": "^3.0.2"
   },
   "devDependencies": {
     "@ifu/cli": "workspace:^0.0.3",

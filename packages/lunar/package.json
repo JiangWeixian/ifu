@@ -25,10 +25,13 @@
   "exports": "./index.js",
   "scripts": {
     "test": "ava",
-    "build": "tsc",
+    "build": "ttsc",
     "postinstall": "ifu -c || alfy-init",
     "pretest": "npm run build",
     "preuninstall": "alfy-cleanup"
+  },
+  "engines": {
+    "node": ">=12"
   },
   "publishConfig": {
     "access": "public"
@@ -37,8 +40,7 @@
     "alfy": "^0.11.1",
     "dayjs": "^1.8.36",
     "solarlunar": "^2.0.7",
-    "suncalc": "^1.8.0",
-    "tslib": "^2.0.1"
+    "suncalc": "^1.8.0"
   },
   "devDependencies": {
     "@ifu/cli": "workspace:^0.0.3",

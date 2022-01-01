@@ -46,6 +46,9 @@
     "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
     "lint:fix": "eslint . --fix"
   },
+  "engines": {
+    "node": ">=12"
+  },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
     "alfy": "^0.12.2",
@@ -62,9 +65,6 @@
     "husky": "^7.0.0",
     "lint-staged": "^11.1.0",
     "prettier": "^2.3.2",
-    "tsc-progress": "^1.0.1",
-    "ttypescript": "^1.5.13",
-    "typescript": "^4.0.2",
-    "typescript-transform-extensions": "^1.0.1"
+    "typescript": "^4.0.2"
   }
 }
