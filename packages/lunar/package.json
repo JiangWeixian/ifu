@@ -24,7 +24,7 @@
   ],
   "exports": "./index.js",
   "scripts": {
-    "test": "ava",
+    "test": "pnpm run build && ava",
     "build": "ttsc",
     "postinstall": "ifu -c || alfy-init",
     "pretest": "npm run build",

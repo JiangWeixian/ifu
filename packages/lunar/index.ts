@@ -1,4 +1,4 @@
-import * as solarLunar from 'solarlunar'
+import solarLunar from 'solarlunar'
 import dayjs from 'dayjs'
 import alfy from 'alfy'
 import { moonphase } from './moonphase'
