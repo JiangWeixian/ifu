@@ -15,13 +15,14 @@
     "url": "https://github.com/JiangWeixian/afu"
   },
   "author": "JiangWeixian",
+  "type": "module",
   "files": [
     "index.js",
     "utils.js",
     "info.plist",
     "icon.png"
   ],
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "test": "pnpm run build && ava",
     "build": "tsc",

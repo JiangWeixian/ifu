@@ -1,8 +1,9 @@
 {
   "name": "@ifu/popcron",
   "version": "1.2.1",
-  "description": "translate cRonstrue",
+  "description": "translate cronstrue",
   "keywords": [
+    "ifu",
     "alfred",
     "cronstruce",
     "popcron"
@@ -15,12 +16,13 @@
     "url": "https://github.com/JiangWeixian/afu"
   },
   "author": "JiangWeixian",
+  "type": "module",
   "files": [
     "index.js",
     "info.plist",
     "icon.png"
   ],
-  "main": "index.js",
+  "exports": "./index.js",
   "scripts": {
     "test": "ava",
     "build": "tsc",

@@ -1,21 +1,3 @@
 {
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "CommonJS",
-    "lib": ["ES2020.String"],
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "strict": true,
-    "resolveJsonModule": true,
-    "noImplicitReturns": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "baseUrl": ".",
-    "downlevelIteration": true
-  },
-  "exclude": ["node_modules", "lib", "test", "utils"]
+  "extends": "../../tsconfig.json"
 }
