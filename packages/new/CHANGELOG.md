@@ -1,5 +1,11 @@
 # @ifu/new
 
+## 0.0.4
+
+### Patch Changes
+
+- f1a8fcb: add ifu/cli as deps
+
 ## 0.0.3
 
 ### Patch Changes
