@@ -8,11 +8,11 @@
     "daydayup"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/JiangWeixian/afu/packages/daydayup/README.md",
+  "homepage": "https://github.com/JiangWeixian/ifu#readme",
   "repository": {
-    "directory": "daydayup",
+    "directory": "packages/daydayup",
     "type": "git",
-    "url": "https://github.com/JiangWeixian/afu"
+    "url": "https://github.com/JiangWeixian/ifu"
   },
   "author": "JiangWeixian",
   "type": "module",

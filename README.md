@@ -10,7 +10,7 @@
 
 **alfy-test** not support `.mjs` now, you should patch `run-node.sh`
 
-```sh
+```diff
 + node "@"
 - ESM_OPTIONS='{"await":true}' node --require esm "$@"
 ```
