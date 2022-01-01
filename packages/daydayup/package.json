@@ -36,14 +36,14 @@
     "node": ">=12"
   },
   "dependencies": {
-    "alfy": "^0.11.1",
+    "@ifu/cli": "workspace:^0.0.3",
+    "alfy": "^0.12.2",
     "dayjs": "^1.8.36",
     "lodash.isnan": "^3.0.2"
   },
   "devDependencies": {
-    "@ifu/cli": "workspace:^0.0.3",
     "@types/lodash.isnan": "^3.0.6",
-    "alfy-test": "^0.4.0",
+    "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
     "typescript": "^4.0.2"
   }

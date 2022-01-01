@@ -15,6 +15,10 @@
       "eslint --fix"
     ]
   },
+  "dependencies": {
+    "@ifu/cli": "workspace:^0.0.3",
+    "alfy": "^0.12.2"
+  },
   "devDependencies": {
     "@aiou/eslint-config": "^0.3.2",
     "@changesets/cli": "^2.16.0",
