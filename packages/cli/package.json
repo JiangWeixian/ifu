@@ -36,11 +36,6 @@
     "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
     "lint:fix": "eslint . --fix"
   },
-  "lint-staged": {
-    "**/**/*.{js,ts,tsx,vue,json}": [
-      "eslint --fix"
-    ]
-  },
   "dependencies": {
     "chalk": "4.1.1",
     "commander": "8.0.0",
@@ -61,7 +56,6 @@
     "execa": "^5.1.1",
     "husky": "^7.0.0",
     "jest": "^27.3.1",
-    "lint-staged": "^11.0.1",
     "np": "7.5.0",
     "prettier": "2.3.2",
     "pretty-quick": "3.1.1",

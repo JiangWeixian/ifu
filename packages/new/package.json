@@ -1,0 +1,66 @@
+{
+  "name": "@ifu/new",
+  "version": "0.0.1",
+  "description": "new script from alfred",
+  "keywords": [
+    "alfred",
+    "new",
+    "script"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/JiangWeixian/ifu#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiangWeixian/ifu.git",
+    "directory": "packages/new"
+  },
+  "bugs": {
+    "url": "https://github.com/JiangWeixian/ifu/issues",
+    "email": "jiangweixian1994@gmail.com"
+  },
+  "author": {
+    "name": "JW",
+    "email": "jiangweixian1994@gmail.com",
+    "url": "https://twitter.com/jiangweixian"
+  },
+  "type": "module",
+  "files": [
+    "index.js",
+    "new.json"
+  ],
+  "exports": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "pnpm run build && ava",
+    "build": "ttsc",
+    "postinstall": "ifu -c || alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "ci:publish": "pnpm run build && pnpx changeset publish",
+    "ci:version": "pnpx changeset version",
+    "ci:snapshot": "pnpx changeset version --snapshot beta",
+    "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "alfy": "^0.12.2"
+  },
+  "devDependencies": {
+    "@aiou/eslint-config": "latest",
+    "@changesets/cli": "^2.16.0",
+    "@ifu/cli": "^0.0.3",
+    "@types/lodash.isnan": "^3.0.6",
+    "alfy-test": "^0.4.2",
+    "ava": "^3.12.1",
+    "eslint": "^7.x",
+    "esm": "^3.2.25",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.0",
+    "prettier": "^2.3.2",
+    "tsc-progress": "^1.0.1",
+    "ttypescript": "^1.5.13",
+    "typescript": "^4.0.2",
+    "typescript-transform-extensions": "^1.0.1"
+  }
+}
