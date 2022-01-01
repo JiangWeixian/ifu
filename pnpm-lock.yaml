@@ -157,6 +157,7 @@ importers:
       ava: ^3.12.1
       eslint: ^7.x
       esm: ^3.2.25
+      fuzzy-search: ^3.2.1
       husky: ^7.0.0
       lint-staged: ^11.1.0
       prettier: ^2.3.2
@@ -167,6 +168,7 @@ importers:
     dependencies:
       '@ifu/cli': link:../cli
       alfy: 0.12.2
+      fuzzy-search: 3.2.1
     devDependencies:
       '@aiou/eslint-config': 0.3.2_b0fc0f52cd18fae8b0264e3331916636
       '@changesets/cli': 2.16.0

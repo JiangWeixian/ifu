@@ -47,7 +47,8 @@
   },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
-    "alfy": "^0.12.2"
+    "alfy": "^0.12.2",
+    "fuzzy-search": "^3.2.1"
   },
   "devDependencies": {
     "@aiou/eslint-config": "latest",
