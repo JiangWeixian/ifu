@@ -104,8 +104,8 @@ export const shortcuts = [
     name: 'Medium Post',
   },
   {
-    url: 'https://hackthon.new',
-    name: 'Hackthon',
+    url: 'https://hackathon.new',
+    name: 'Hackathon',
   },
   {
     url: 'https://figma.new',
