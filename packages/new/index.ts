@@ -13,6 +13,9 @@ alfy.output(
       title: item.name,
       subtitle: item.url,
       arg: item.url,
+      icon: {
+        path: item.icon,
+      },
     }
   }),
 )
