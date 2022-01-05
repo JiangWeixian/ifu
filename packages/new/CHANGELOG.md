@@ -1,5 +1,11 @@
 # @ifu/new
 
+## 0.2.1
+
+### Patch Changes
+
+- 969d452: fix hackathon typo
+
 ## 0.2.0
 
 ### Minor Changes
