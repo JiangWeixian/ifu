@@ -1,5 +1,11 @@
 # @ifu/new
 
+## 0.3.0
+
+### Minor Changes
+
+- 68fd15e: display icon
+
 ## 0.2.1
 
 ### Patch Changes
