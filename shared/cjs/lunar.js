@@ -96,7 +96,7 @@ var lunar = {
         var now = dayjs__default["default"]();
         var lunar = solarLunar.solar2lunar(now.year(), now.month() + 1, now.date());
         var phase = moonphase(now.toDate());
-        return [
+        var list = [
             {
                 title: YEARS[lunar.animal] + " \u00B7 " + lunar.animal + "\u5E74",
             },
@@ -115,6 +115,7 @@ var lunar = {
                 title: [lunar.gzYear + "\u5E74", lunar.gzMonth + "\u6708", lunar.gzDay + "\u65E5"].join(' · '),
             },
         ];
+        return { list: list, lunar: lunar, phase: phase };
     },
 };
 

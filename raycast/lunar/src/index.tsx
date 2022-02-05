@@ -3,7 +3,7 @@ import { lunar } from '@ifu/shared/lunar'
 import { compact } from 'lodash-es'
 
 export default function Command() {
-  const items = compact(lunar.info())
+  const items = compact(lunar.info().list)
 
   return (
     <List isLoading={false} searchBarPlaceholder="Filter by title...">

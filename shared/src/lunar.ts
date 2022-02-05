@@ -100,7 +100,7 @@ export const lunar = {
     const now = dayjs()
     const lunar: Lunar = solarLunar.solar2lunar(now.year(), now.month() + 1, now.date())
     const phase = moonphase(now.toDate())
-    return [
+    const list = [
       {
         title: `${YEARS[lunar.animal]} · ${lunar.animal}年`,
       },
@@ -119,5 +119,6 @@ export const lunar = {
         title: [`${lunar.gzYear}年`, `${lunar.gzMonth}月`, `${lunar.gzDay}日`].join(' · '),
       },
     ]
+    return { list, lunar, phase }
   },
 }
