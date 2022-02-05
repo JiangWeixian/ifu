@@ -26,6 +26,11 @@
       "require": "./cjs/lunar.js",
       "import": "./esm/lunar.mjs",
       "types": "./esm/lunar.d.ts"
+    },
+    "./shortcuts": {
+      "require": "./cjs/shortcuts.js",
+      "import": "./esm/shortcuts.mjs",
+      "types": "./esm/shortcuts.d.ts"
     }
   },
   "typings": "esm/index.d.ts",
@@ -33,6 +38,9 @@
     "*": {
       "lunar": [
         "esm/lunar.d.ts"
+      ],
+      "shortcuts": [
+        "esm/shortcuts.d.ts"
       ]
     }
   },

@@ -1,1 +1,1 @@
-export declare const SHARED_PLUGINS = 'lunar'
+export declare const SHARED_PLUGINS = "lunar";

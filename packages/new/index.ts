@@ -1,7 +1,6 @@
 import alfy from 'alfy'
 import FuzzySearch from 'fuzzy-search'
-
-import { shortcuts } from './constants'
+import { shortcuts } from '@ifu/shared/shortcuts'
 
 const searcher = new FuzzySearch(shortcuts, ['name'])
 

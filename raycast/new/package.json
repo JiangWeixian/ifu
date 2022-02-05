@@ -15,6 +15,7 @@
     }
   ],
   "dependencies": {
+    "@ifu/shared": "workspace:^0.0.0",
     "@raycast/api": "^1.27.1"
   },
   "devDependencies": {

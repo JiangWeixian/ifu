@@ -1,6 +1,6 @@
 import { ActionPanel, OpenInBrowserAction, Icon, List } from "@raycast/api";
 
-import { shortcuts } from './constants'
+import { shortcuts } from '@ifu/shared/shortcuts'
 
 export default function Command() {
   const items = shortcuts.map((item) => {
