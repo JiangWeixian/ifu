@@ -39,10 +39,7 @@
     "@ifu/cli": "workspace:^0.0.3",
     "@ifu/shared": "workspace:^0.0.0",
     "alfy": "^0.12.2",
-    "dayjs": "^1.8.36",
-    "lodash-es": "^4.17.21",
-    "solarlunar": "^2.0.7",
-    "suncalc": "^1.8.0"
+    "lodash-es": "^4.17.21"
   },
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.4",
