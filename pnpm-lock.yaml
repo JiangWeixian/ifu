@@ -189,20 +189,38 @@ importers:
   packages/popcron:
     specifiers:
       '@ifu/cli': workspace:^0.0.3
+      '@ifu/shared': workspace:^0.0.0
+      '@rollup/plugin-alias': ^3.1.4
+      '@rollup/plugin-commonjs': ^21.0.0
+      '@rollup/plugin-node-resolve': ^13.0.4
+      '@types/lodash-es': ^4.17.5
       '@types/lodash.uniqby': ^4.7.6
       alfy: ^0.12.2
       ava: ^3.12.1
       cronstrue: ^1.100.0
+      lodash-es: ^4.17.21
       lodash.uniqby: ^4.7.0
+      rollup: 2.58.0
+      rollup-plugin-size: ^0.2.2
+      rollup-plugin-typescript2: 0.30.0
       typescript: ^4.0.2
     dependencies:
       '@ifu/cli': link:../cli
       alfy: 0.12.2
-      cronstrue: 1.114.0
+      lodash-es: 4.17.21
       lodash.uniqby: 4.7.0
     devDependencies:
+      '@ifu/shared': link:../../shared
+      '@rollup/plugin-alias': 3.1.9_rollup@2.58.0
+      '@rollup/plugin-commonjs': 21.0.1_rollup@2.58.0
+      '@rollup/plugin-node-resolve': 13.1.3_rollup@2.58.0
+      '@types/lodash-es': 4.17.5
       '@types/lodash.uniqby': 4.7.6
       ava: 3.15.0
+      cronstrue: 1.114.0
+      rollup: 2.58.0
+      rollup-plugin-size: 0.2.2
+      rollup-plugin-typescript2: 0.30.0_rollup@2.58.0+typescript@4.3.5
       typescript: 4.3.5
 
   raycast/lunar:
@@ -263,6 +281,35 @@ importers:
       react-devtools: 4.23.0
       typescript: 4.5.5
 
+  raycast/popcron:
+    specifiers:
+      '@ifu/shared': workspace:^0.0.0
+      '@raycast/api': ^1.27.1
+      '@types/node': ~16.10.0
+      '@types/react': ^17.0.28
+      '@typescript-eslint/eslint-plugin': ^5.0.0
+      '@typescript-eslint/parser': ^5.0.0
+      eslint: ^7.32.0
+      eslint-config-prettier: ^8.3.0
+      node-fetch: ^3.0.0
+      prettier: ^2.5.1
+      react-devtools: ^4.19.2
+      typescript: ^4.4.3
+    dependencies:
+      '@ifu/shared': link:../../shared
+      '@raycast/api': 1.27.1
+      node-fetch: 3.2.0
+    devDependencies:
+      '@types/node': 16.10.9
+      '@types/react': 17.0.38
+      '@typescript-eslint/eslint-plugin': 5.10.1_bfd9cbbab4c643796c083962b876a1a4
+      '@typescript-eslint/parser': 5.10.1_eslint@7.32.0+typescript@4.5.5
+      eslint: 7.32.0
+      eslint-config-prettier: 8.3.0_eslint@7.32.0
+      prettier: 2.5.1
+      react-devtools: 4.23.0
+      typescript: 4.5.5
+
   shared:
     specifiers:
       '@changesets/cli': ^2.17.0
@@ -270,6 +317,7 @@ importers:
       '@rollup/plugin-commonjs': ^21.0.0
       '@rollup/plugin-node-resolve': ^13.0.4
       '@types/jest': 27.0.2
+      cronstrue: ^1.100.0
       dayjs: ^1.8.36
       jest: 27.2.5
       prettier: 2.4.1
@@ -286,6 +334,7 @@ importers:
       tslib: 2.3.1
       typescript: 4.4.3
     dependencies:
+      cronstrue: 1.114.0
       dayjs: 1.10.6
       solarlunar: 2.0.7
       suncalc: 1.8.0
@@ -3392,7 +3441,6 @@ packages:
 
   /cronstrue/1.114.0:
     resolution: {integrity: sha512-j1JuBHTJKKX41NUJVHmWn2ZYHnLipsIoq7bAZVeVzehA9+rmG6v9NgMiMa0KiiFzozihgt4yGNe5aMVc/IoYLg==}
-    dev: false
 
   /cross-spawn/5.1.0:
     resolution: {integrity: sha1-6L0O/uWPz/b4+UUQoKVUu/ojVEk=}
@@ -3481,6 +3529,11 @@ packages:
       read-pkg-up: 7.0.1
       wrap-ansi: 3.0.1
     dev: true
+
+  /data-uri-to-buffer/4.0.0:
+    resolution: {integrity: sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==}
+    engines: {node: '>= 12'}
+    dev: false
 
   /data-urls/2.0.0:
     resolution: {integrity: sha512-X5eWTSXO/BJmpdIKCRuKUgSCgAN0OwliVK3yPKbwIWU1Tdw5BRajxlzMidvh+gwko9AfQ9zIj52pzF91Q3YAvQ==}
@@ -4523,6 +4576,14 @@ packages:
       pend: 1.2.0
     dev: true
 
+  /fetch-blob/3.1.4:
+    resolution: {integrity: sha512-Eq5Xv5+VlSrYWEqKrusxY1C3Hm/hjeAsCGVG3ft7pZahlUAChpGZT/Ms1WmSLnEAisEXszjzu/s+ce6HZB2VHA==}
+    engines: {node: ^12.20 || >= 14.13}
+    dependencies:
+      node-domexception: 1.0.0
+      web-streams-polyfill: 3.2.0
+    dev: false
+
   /figures/2.0.0:
     resolution: {integrity: sha1-OrGi0qYsi/tDGgyUy3l6L84nyWI=}
     engines: {node: '>=4'}
@@ -4634,6 +4695,13 @@ packages:
       combined-stream: 1.0.8
       mime-types: 2.1.33
     dev: true
+
+  /formdata-polyfill/4.0.10:
+    resolution: {integrity: sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==}
+    engines: {node: '>=12.20.0'}
+    dependencies:
+      fetch-blob: 3.1.4
+    dev: false
 
   /fs-extra/10.0.0:
     resolution: {integrity: sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==}
@@ -6797,6 +6865,20 @@ packages:
   /natural-compare/1.4.0:
     resolution: {integrity: sha1-Sr6/7tdUHywnrPspvbvRXI1bpPc=}
     dev: true
+
+  /node-domexception/1.0.0:
+    resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
+    engines: {node: '>=10.5.0'}
+    dev: false
+
+  /node-fetch/3.2.0:
+    resolution: {integrity: sha512-8xeimMwMItMw8hRrOl3C9/xzU49HV/yE6ORew/l+dxWimO5A4Ra8ld2rerlJvc/O7et5Z1zrWsPX43v1QBjCxw==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      data-uri-to-buffer: 4.0.0
+      fetch-blob: 3.1.4
+      formdata-polyfill: 4.0.10
+    dev: false
 
   /node-int64/0.4.0:
     resolution: {integrity: sha1-h6kGXNs1XTGC2PlM4RGIuCXGijs=}
@@ -9009,6 +9091,11 @@ packages:
     dependencies:
       defaults: 1.0.3
     dev: true
+
+  /web-streams-polyfill/3.2.0:
+    resolution: {integrity: sha512-EqPmREeOzttaLRm5HS7io98goBgZ7IVz79aDvqjD0kYXLtFZTc0T/U6wHTPKyIjb+MdN7DFIIX6hgdBEpWmfPA==}
+    engines: {node: '>= 8'}
+    dev: false
 
   /webidl-conversions/5.0.0:
     resolution: {integrity: sha512-VlZwKPCkYKxQgeSbH5EyngOmRp7Ww7I9rQLERETtf5ofd9pGeswWiOtogpEO850jziPRarreGxn5QIiTqpb2wA==}
