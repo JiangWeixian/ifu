@@ -1,6 +1,6 @@
 import cronstrue from 'cronstrue/i18n.js'
 import alfy from 'alfy'
-import uniqby from 'lodash.uniqby'
+import { uniqBy } from 'lodash-es'
 
 const DEFAULT_LOCALE = 'en'
 const KEY = 'history'
@@ -28,5 +28,5 @@ if (alfy.input === 'h') {
 
   alfy.output([item])
 
-  alfy.cache.set(KEY, JSON.stringify(uniqby([item].concat(history || []), 'arg')))
+  alfy.cache.set(KEY, JSON.stringify(uniqBy([item].concat(history || []), 'arg')))
 }
