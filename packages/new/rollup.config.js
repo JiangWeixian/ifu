@@ -23,7 +23,8 @@ export default defineConfig([
       size(),
     ],
     output: [
-      { dir: '.', entryFileNames: 'index.mjs', format: 'esm' },
+      // alfy-test or alfy not support mjs ext
+      { dir: '.', entryFileNames: 'index.js', format: 'esm' },
     ],
   },
 ])

@@ -6,6 +6,6 @@ test('should has default output', async (t) => {
 
   const result = await alfy(' ')
 
-  t.snapshot(result)
+  t.not(result.length, 0)
 })
 

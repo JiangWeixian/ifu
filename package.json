@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
-    "alfy": "^0.12.2"
+    "alfy": "0.12.2"
   },
   "devDependencies": {
     "@aiou/eslint-config": "^0.3.2",

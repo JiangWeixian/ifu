@@ -21,13 +21,14 @@
   "author": "JW <jiangweixian1994@gmail.com> (https://twitter.com/jiangweixian)",
   "type": "module",
   "files": [
-    "index.mjs",
+    "index.js",
     "info.plist",
     "icon.png"
   ],
-  "exports": "./index.mjs",
+  "exports": "./index.js",
   "scripts": {
-    "test": "ava",
+    "atest": "ava",
+    "test": "pnpm run build && ava",
     "build": "rollup -c --silent",
     "postinstall": "ifu -c || alfy-init",
     "pretest": "pnpm run build",
@@ -38,10 +39,9 @@
   },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
-    "alfy": "^0.12.2"
+    "alfy": "0.12.2"
   },
   "devDependencies": {
-    "@types/lodash.isnan": "^3.0.6",
     "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
     "fuzzy-emoji": "1.0.4",

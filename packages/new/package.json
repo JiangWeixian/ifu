@@ -26,17 +26,18 @@
   },
   "type": "module",
   "files": [
-    "index.mjs",
+    "index.js",
     "info.plist",
     "icon.png"
   ],
-  "exports": "./index.mjs",
+  "exports": "./index.js",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "atest": "ava",
     "test": "pnpm run build && ava",
-    "build": "rm -rf esm && rollup -c --silent",
+    "build": "rm -rf index.js && rollup -c --silent",
     "postinstall": "ifu -c || alfy-init",
     "preuninstall": "alfy-cleanup",
     "lint:fix": "eslint . --fix"
@@ -46,19 +47,13 @@
   },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
-    "alfy": "^0.12.2"
+    "alfy": "0.12.2"
   },
   "devDependencies": {
     "@ifu/shared": "workspace:^0.0.0",
-    "@rollup/plugin-alias": "^3.1.4",
-    "@rollup/plugin-commonjs": "^21.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.4",
     "ava": "^3.12.1",
     "esm": "^3.2.25",
     "fuzzy-search": "^3.2.1",
-    "rollup": "2.58.0",
-    "rollup-plugin-size": "^0.2.2",
-    "rollup-plugin-typescript2": "0.30.0",
     "typescript": "^4.0.2"
   }
 }

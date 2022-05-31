@@ -17,12 +17,13 @@
   "author": "JiangWeixian",
   "type": "module",
   "files": [
-    "index.mjs",
+    "index.js",
     "info.plist",
     "icon.png"
   ],
-  "exports": "./index.mjs",
+  "exports": "./index.js",
   "scripts": {
+    "atest": "ava",
     "test": "pnpm run build && ava",
     "build": "rollup -c --silent",
     "postinstall": "ifu -c || alfy-init",
@@ -36,7 +37,7 @@
   },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
-    "alfy": "^0.12.2"
+    "alfy": "0.12.2"
   },
   "devDependencies": {
     "@types/lodash.isnan": "^3.0.6",
