@@ -18,32 +18,30 @@
     "email": "jiangweixian1994@gmail.com",
     "url": "https://twitter.com/jiangweixian"
   },
-  "files": [
-    "lib",
-    "bin"
-  ],
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "bin": {
     "ifu": "bin/index.cjs"
   },
+  "files": [
+    "lib",
+    "bin"
+  ],
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "rimraf lib && rollup -c --silent",
-    "test": "pnpm run build && jest"
+    "test": "pnpm run build && vitest",
+    "vtest": "vitest"
   },
   "dependencies": {
     "chalk": "4.1.1",
     "commander": "8.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.2",
     "@types/node": "16.3.3",
     "@types/rimraf": "3.0.1",
     "execa": "^5.1.1",
-    "jest": "^27.3.1",
     "rimraf": "3.0.2",
-    "ts-jest": "^27.0.7",
     "tslib": "2.3.1",
     "typescript": "4.3.5"
   }

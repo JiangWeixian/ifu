@@ -1,6 +1,7 @@
 import execa from 'execa'
 import path from 'path'
 import pkg from '../package.json'
+import { describe, it, expect } from 'vitest'
 
 const cli = path.resolve(__dirname, '../lib/cli.cjs')
 

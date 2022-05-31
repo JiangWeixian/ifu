@@ -1,12 +1,12 @@
-import test from 'ava'
 import alfyTest from 'alfy-test'
+import { test, expect } from 'vitest'
 
-test('main', async (t) => {
+test('main', async () => {
   const alfy = alfyTest()
 
   const result = await alfy('0 23 ? * MON-FRI')
 
-  t.deepEqual(result, [
+  expect(result).toMatchObject([
     {
       arg: 'At 11:00 PM, Monday through Friday',
       icon: {
