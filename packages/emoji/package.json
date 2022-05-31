@@ -28,7 +28,7 @@
   "exports": "./index.js",
   "scripts": {
     "test": "ava",
-    "build": "ttsc",
+    "build": "rollup -c --silent",
     "postinstall": "ifu -c || alfy-init",
     "pretest": "pnpm run build",
     "preuninstall": "alfy-cleanup"
@@ -38,13 +38,13 @@
   },
   "dependencies": {
     "@ifu/cli": "workspace:^0.0.3",
-    "alfy": "^0.12.2",
-    "fuzzy-emoji": "^1.0.4"
+    "alfy": "^0.12.2"
   },
   "devDependencies": {
     "@types/lodash.isnan": "^3.0.6",
     "alfy-test": "^0.4.2",
     "ava": "^3.12.1",
+    "fuzzy-emoji": "1.0.4",
     "typescript": "^4.0.2"
   }
 }
