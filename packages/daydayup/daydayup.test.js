@@ -1,6 +1,6 @@
 import test from 'ava'
 import alfyTest from 'alfy-test'
-import * as utils from './utils.js'
+// import * as utils from './utils.js'
 
 // FIXME: single test without alfy will pass follow test
 // test('should parse string durations correct', async (t) => {
@@ -20,10 +20,10 @@ test('should has default output', async (t) => {
   t.is(!!result, true)
 })
 
-test('should support string durations', async (t) => {
-  const input = '1y1m1ms'
-  t.is(utils.isStringDuration(input), true)
-})
+// test('should support string durations', async (t) => {
+//   const input = '1y1m1ms'
+//   t.is(utils.isStringDuration(input), true)
+// })
 
 test('should support duration output', async (t) => {
   const alfy = alfyTest()
