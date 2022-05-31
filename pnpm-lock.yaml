@@ -106,17 +106,17 @@ importers:
       '@types/lodash.isnan': ^3.0.6
       alfy: ^0.12.2
       ava: ^3.12.1
-      dayjs: ^1.8.36
-      lodash.isnan: ^3.0.2
+      dayjs: 1.8.36
+      lodash.isnan: 3.0.2
       typescript: ^4.0.2
     dependencies:
       '@ifu/cli': link:../cli
       alfy: 0.12.2
-      dayjs: 1.10.6
-      lodash.isnan: 3.0.2
     devDependencies:
       '@types/lodash.isnan': 3.0.6
       ava: 3.15.0
+      dayjs: 1.8.36
+      lodash.isnan: 3.0.2
       typescript: 4.3.5
 
   packages/emoji:
@@ -126,16 +126,16 @@ importers:
       alfy: ^0.12.2
       alfy-test: ^0.4.2
       ava: ^3.12.1
-      fuzzy-emoji: ^1.0.4
+      fuzzy-emoji: 1.0.4
       typescript: ^4.0.2
     dependencies:
       '@ifu/cli': link:../cli
       alfy: 0.12.2
-      fuzzy-emoji: 1.0.4
     devDependencies:
       '@types/lodash.isnan': 3.0.6
       alfy-test: 0.4.2
       ava: 3.15.0
+      fuzzy-emoji: 1.0.4
       typescript: 4.3.5
 
   packages/lunar:
@@ -203,7 +203,8 @@ importers:
       '@types/lodash.uniqby': ^4.7.6
       alfy: ^0.12.2
       ava: ^3.12.1
-      cronstrue: ^1.100.0
+      cronstrue: 1.100.0
+      lodash-es: ^4.17.21
       lodash.uniqby: ^4.7.0
       rollup: 2.58.0
       rollup-plugin-size: ^0.2.2
@@ -212,7 +213,6 @@ importers:
     dependencies:
       '@ifu/cli': link:../cli
       alfy: 0.12.2
-      cronstrue: 1.114.0
     devDependencies:
       '@ifu/shared': link:../../shared
       '@rollup/plugin-alias': 3.1.9_rollup@2.58.0
@@ -221,6 +221,8 @@ importers:
       '@types/lodash-es': 4.17.5
       '@types/lodash.uniqby': 4.7.6
       ava: 3.15.0
+      cronstrue: 1.100.0
+      lodash-es: 4.17.21
       lodash.uniqby: 4.7.0
       rollup: 2.58.0
       rollup-plugin-size: 0.2.2
@@ -1850,7 +1852,7 @@ packages:
 
   /@types/fuzzy-search/2.1.1:
     resolution: {integrity: sha512-Hxra+pa7pb9yiRT+liXIi6B1QH9tyEGliKdQWQ5O+pl0iAdn7pyxFDbNw4VdEzz/K/0jFgk69eJkOPyBF4ehyQ==}
-    dev: false
+    dev: true
 
   /@types/glob/7.2.0:
     resolution: {integrity: sha512-ZUxbzKl0IfJILTS6t7ip5fQQM/J3TJYubDm3nMbgubNNYS62eXeUpoLUC8/7fJNiFYHTrGPQn7hspDUzIHX3UA==}
@@ -3489,6 +3491,10 @@ packages:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
     dev: true
 
+  /cronstrue/1.100.0:
+    resolution: {integrity: sha512-Hz+xjjmq2QgCQhnPxIVM02dwhOt5GwUywjKa17je9JWX4z2E0uecObXCFap8bmJE87JL9mToW/cGw5O06JgigQ==}
+    dev: true
+
   /cronstrue/1.114.0:
     resolution: {integrity: sha512-j1JuBHTJKKX41NUJVHmWn2ZYHnLipsIoq7bAZVeVzehA9+rmG6v9NgMiMa0KiiFzozihgt4yGNe5aMVc/IoYLg==}
     dev: false
@@ -3605,6 +3611,10 @@ packages:
   /dayjs/1.10.6:
     resolution: {integrity: sha512-AztC/IOW4L1Q41A86phW5Thhcrco3xuAA+YX/BLpLWWjRcTj5TOt/QImBLmCKlrF7u7k47arTnOyL6GnbG8Hvw==}
     dev: false
+
+  /dayjs/1.8.36:
+    resolution: {integrity: sha512-3VmRXEtw7RZKAf+4Tv1Ym9AGeo8r8+CjDi26x+7SYQil1UqtqdaokhzoEJohqlzt0m5kacJSDhJQkG/LWhpRBw==}
+    dev: true
 
   /debounce-fn/4.0.0:
     resolution: {integrity: sha512-8pYCQiL9Xdcg0UPSD3d+0KMlOjp+KGU5EPwYddgzQ7DATsg4fuUDjQtsYLmWjnk2obnNHgV3vE2Y4jejSOJVBQ==}
@@ -4316,7 +4326,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 4.33.0_eslint@7.31.0+typescript@4.3.5
+      '@typescript-eslint/parser': 4.33.0_eslint@7.31.0
       debug: 3.2.7
       eslint-import-resolver-node: 0.3.6
       find-up: 2.1.0
@@ -4363,7 +4373,7 @@ packages:
       '@typescript-eslint/parser':
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 4.33.0_eslint@7.31.0+typescript@4.3.5
+      '@typescript-eslint/parser': 4.33.0_eslint@7.31.0
       array-includes: 3.1.4
       array.prototype.flat: 1.2.5
       debug: 2.6.9
@@ -5082,14 +5092,15 @@ packages:
       '@types/fuzzy-search': 2.1.1
       fuzzy-search: 3.2.1
       gemoji: 7.0.0
-    dev: false
+    dev: true
 
   /fuzzy-search/3.2.1:
     resolution: {integrity: sha512-vAcPiyomt1ioKAsAL2uxSABHJ4Ju/e4UeDM+g1OlR0vV4YhLGMNsdLNvZTpEDY4JCSt0E4hASCNM5t2ETtsbyg==}
+    dev: true
 
   /gemoji/7.0.0:
     resolution: {integrity: sha512-QN1P252570sLIRdEUQCB0hA1EaEuQZCcgLIDxSEPr353q9eBRLxV7cRN/MxhVRCXqybUX0GwUgi0qPMV0zSA7w==}
-    dev: false
+    dev: true
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}
@@ -6900,8 +6911,8 @@ packages:
     dev: true
 
   /lodash.isnan/3.0.2:
-    resolution: {integrity: sha1-gu0Epfnqi9YibQwmrwysMvRQd0U=}
-    dev: false
+    resolution: {integrity: sha512-zduioV6njyRsie8qtuS85u7B8xJWi3HjUc1klVoRdeghA5prG13xbUNNcCJ1Cxwa4FyjJVnkL5hDopCVh2ng4g==}
+    dev: true
 
   /lodash.memoize/4.1.2:
     resolution: {integrity: sha1-vMbEmkKihA7Zl/Mj6tpezRguC/4=}
