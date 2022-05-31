@@ -19,29 +19,29 @@
     "url": "https://twitter.com/jiangweixian"
   },
   "files": [
-    "lib"
+    "lib",
+    "bin"
   ],
-  "main": "lib/index.js",
-  "module": "lib/index.js",
+  "main": "lib/index.cjs",
+  "module": "lib/index.mjs",
   "bin": {
-    "ifu": "lib/cli.js"
+    "ifu": "bin/index.mjs"
   },
   "scripts": {
     "prebuild": "rimraf lib",
-    "build": "rimraf lib && tsc",
+    "build": "rimraf lib && rollup -c --silent",
     "test": "pnpm run build && jest",
-    "ci:publish": "pnpm run build && pnpx changeset publish",
-    "ci:version": "pnpx changeset version",
-    "ci:snapshot": "pnpx changeset version --snapshot beta",
-    "ci:prerelease": "pnpm run build && pnpx changeset publish --tag beta",
-    "lint:fix": "eslint . --fix"
+    "ci:publish": "pnpm run build && pnpm changeset publish",
+    "ci:version": "pnpm changeset version",
+    "ci:snapshot": "pnpm changeset version --snapshot beta",
+    "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta"
   },
   "dependencies": {
     "chalk": "4.1.1",
-    "commander": "8.0.0",
-    "tslib": "^2.3.1"
+    "commander": "8.0.0"
   },
   "devDependencies": {
+    "tslib": "2.3.1",
     "@aiou/eslint-config": "0.2.1",
     "@changesets/cli": "^2.16.0",
     "@types/download": "8.0.1",
