@@ -25,16 +25,12 @@
   "main": "lib/index.cjs",
   "module": "lib/index.mjs",
   "bin": {
-    "ifu": "bin/index.mjs"
+    "ifu": "bin/index.cjs"
   },
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "rimraf lib && rollup -c --silent",
-    "test": "pnpm run build && jest",
-    "ci:publish": "pnpm run build && pnpm changeset publish",
-    "ci:version": "pnpm changeset version",
-    "ci:snapshot": "pnpm changeset version --snapshot beta",
-    "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta"
+    "test": "pnpm run build && jest"
   },
   "dependencies": {
     "chalk": "4.1.1",
@@ -47,8 +43,6 @@
     "@types/rimraf": "3.0.1",
     "execa": "^5.1.1",
     "jest": "^27.3.1",
-    "prettier": "2.3.2",
-    "pretty-quick": "3.1.1",
     "rimraf": "3.0.2",
     "ts-jest": "^27.0.7",
     "tslib": "2.3.1",
