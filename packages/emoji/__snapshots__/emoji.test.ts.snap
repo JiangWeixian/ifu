@@ -1,0 +1,126 @@
+// Vitest Snapshot v1
+
+exports[`should has default output 1`] = `
+[
+  {
+    "arg": "🥰",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "smiling face with hearts",
+    "text": {
+      "copy": "🥰",
+      "largetype": "🥰",
+    },
+    "title": "🥰 :smiling_face_with_three_hearts:",
+  },
+  {
+    "arg": "😍",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "smiling face with heart-eyes",
+    "text": {
+      "copy": "😍",
+      "largetype": "😍",
+    },
+    "title": "😍 :heart_eyes:",
+  },
+  {
+    "arg": "💘",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "heart with arrow",
+    "text": {
+      "copy": "💘",
+      "largetype": "💘",
+    },
+    "title": "💘 :cupid:",
+  },
+  {
+    "arg": "❤️",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "red heart",
+    "text": {
+      "copy": "❤️",
+      "largetype": "❤️",
+    },
+    "title": "❤️ :heart:",
+  },
+  {
+    "arg": "💌",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "love letter",
+    "text": {
+      "copy": "💌",
+      "largetype": "💌",
+    },
+    "title": "💌 :love_letter:",
+  },
+  {
+    "arg": "🤟",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "love-you gesture",
+    "text": {
+      "copy": "🤟",
+      "largetype": "🤟",
+    },
+    "title": "🤟 :love_you_gesture:",
+  },
+  {
+    "arg": "🍀",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "four leaf clover",
+    "text": {
+      "copy": "🍀",
+      "largetype": "🍀",
+    },
+    "title": "🍀 :four_leaf_clover:",
+  },
+  {
+    "arg": "🏩",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "love hotel",
+    "text": {
+      "copy": "🏩",
+      "largetype": "🏩",
+    },
+    "title": "🏩 :love_hotel:",
+  },
+  {
+    "arg": "🥊",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "boxing glove",
+    "text": {
+      "copy": "🥊",
+      "largetype": "🥊",
+    },
+    "title": "🥊 :boxing_glove:",
+  },
+  {
+    "arg": "🧤",
+    "icon": {
+      "path": " ",
+    },
+    "subtitle": "gloves",
+    "text": {
+      "copy": "🧤",
+      "largetype": "🧤",
+    },
+    "title": "🧤 :gloves:",
+  },
+]
+`;

@@ -28,5 +28,6 @@
         "title": "@ifu/new"
       }
     ]
-  }
+  },
+  "include": ["./types.d.ts"]
 }

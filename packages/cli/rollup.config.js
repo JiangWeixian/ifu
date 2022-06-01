@@ -1,30 +1,30 @@
 import commonjs from '@rollup/plugin-commonjs'
 import alias from '@rollup/plugin-alias'
 import size from 'rollup-plugin-size'
-import nodeResolve from '@rollup/plugin-node-resolve'
-import { defineConfig } from 'rollup'
-import esbuild from 'rollup-plugin-esbuild'
+import multipleInput from 'rollup-plugin-multi-input'
 import externals from 'rollup-plugin-node-externals'
+import esbuild from 'rollup-plugin-esbuild'
+import { defineConfig } from 'rollup'
 
 export default defineConfig([
   {
-    input: 'index.ts',
+    input: ['src/**.ts', '!**/**.d.ts'],
     plugins: [
+      multipleInput(),
       externals({
         devDeps: false
       }),
       esbuild(), // so Rollup can convert TypeScript to JavaScript
-      nodeResolve(),
       commonjs(),
       alias({
         resolve: ['.ts', '.js', '.tsx', '.jsx'],
         entries: [{ find: '@/', replacement: './src/' }],
       }),
-      size(),
+      size()
     ],
     output: [
-      // alfy-test or alfy not support mjs ext
-      { dir: '.', entryFileNames: 'index.js', format: 'esm' },
+      { dir: 'lib', format: 'cjs', entryFileNames: '[name].cjs' },
+      { dir: 'lib', entryFileNames: '[name].mjs', format: 'esm' },
     ],
   },
 ])
