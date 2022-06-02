@@ -5,6 +5,7 @@
   "description": "logseq snippets",
   "icon": "command-icon.png",
   "author": "JiangWeixian",
+  "private": true,
   "categories": [
     "Developer Tools"
   ],

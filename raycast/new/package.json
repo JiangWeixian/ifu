@@ -6,6 +6,7 @@
   "icon": "icon.png",
   "author": "JiangWeixian",
   "license": "MIT",
+  "private": true,
   "commands": [
     {
       "name": "index",
