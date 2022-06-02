@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "open-website-shortcuts",
+  "name": "@ifu/raycast-open-website-shortcuts",
   "title": "Open website shortcuts",
   "description": "Open awesome website shortcuts from raycast",
   "icon": "icon.png",
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@ifu/shared": "workspace:^0.0.0",
-    "@raycast/api": "^1.27.1"
+    "@raycast/api": "1.27.1"
   },
   "devDependencies": {
     "@types/node": "~16.10.0",

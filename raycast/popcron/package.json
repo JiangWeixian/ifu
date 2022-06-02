@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "popcron",
+  "name": "@ifu/raycast-popcron",
   "title": "popcron",
   "description": "Translate cronjob",
   "icon": "command-icon.png",
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@ifu/shared": "workspace:^0.0.0",
-    "@raycast/api": "^1.27.1",
+    "@raycast/api": "1.27.1",
     "node-fetch": "^3.0.0"
   },
   "devDependencies": {
