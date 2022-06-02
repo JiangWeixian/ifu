@@ -1,5 +1,13 @@
 # @ifu/new
 
+## 0.3.1
+
+### Patch Changes
+
+- 8fe33e5: build with esbuild and rollup
+- Updated dependencies [8fe33e5]
+  - @ifu/cli@0.0.4
+
 ## 0.3.0
 
 ### Minor Changes
