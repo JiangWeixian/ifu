@@ -1,5 +1,11 @@
 # @ifu/cli
 
+## 0.0.4
+
+### Patch Changes
+
+- 8fe33e5: build with esbuild and rollup
+
 ## 0.0.3
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@ifu/new",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "new script from alfred",
   "keywords": [
     "ifu",
@@ -46,7 +46,7 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@ifu/cli": "workspace:^0.0.3",
+    "@ifu/cli": "workspace:^0.0.4",
     "alfy": "0.12.2"
   },
   "devDependencies": {

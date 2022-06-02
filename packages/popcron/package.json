@@ -1,6 +1,6 @@
 {
   "name": "@ifu/popcron",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "translate cronstrue",
   "keywords": [
     "ifu",
@@ -37,7 +37,7 @@
     "node": ">=12"
   },
   "dependencies": {
-    "@ifu/cli": "workspace:^0.0.3",
+    "@ifu/cli": "workspace:^0.0.4",
     "alfy": "0.12.2"
   },
   "devDependencies": {

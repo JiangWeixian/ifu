@@ -1,6 +1,6 @@
 {
   "name": "@ifu/lunar",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Display lunar calendar in alfred",
   "keywords": [
     "alfred",
@@ -37,7 +37,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@ifu/cli": "workspace:^0.0.3",
+    "@ifu/cli": "workspace:^0.0.4",
     "alfy": "0.12.2"
   },
   "devDependencies": {
