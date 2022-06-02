@@ -23,6 +23,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
+    "./logseq": {
+      "require": "./dist/logseq.cjs",
+      "types": "./dist/logseq.d.ts",
+      "import": "./dist/logseq.mjs"
+    },
     "./lunar": {
       "require": "./dist/lunar.cjs",
       "types": "./dist/lunar.d.ts",
@@ -41,6 +46,9 @@
   },
   "typesVersions": {
     "*": {
+      "logseq": [
+        "dist/logseq.d.ts"
+      ],
       "lunar": [
         "dist/lunar.d.ts"
       ],
