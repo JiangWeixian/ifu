@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "lunar",
+  "name": "@ifu/raycast-lunar",
   "title": "lunar",
   "description": "Display lunar calendar",
   "icon": "command-icon.png",
@@ -16,7 +16,7 @@
   ],
   "dependencies": {
     "@ifu/shared": "workspace:^0.0.0",
-    "@raycast/api": "^1.27.1"
+    "@raycast/api": "1.27.1"
   },
   "devDependencies": {
     "lodash-es": "4.17.21",

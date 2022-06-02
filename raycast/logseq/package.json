@@ -1,6 +1,6 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "logseq",
+  "name": "@ifu/raycast-logseq",
   "title": "logseq",
   "description": "logseq snippets",
   "icon": "command-icon.png",
@@ -19,7 +19,7 @@
   ],
   "dependencies": {
     "@ifu/shared": "workspace:^0.0.0",
-    "@raycast/api": "^1.27.1"
+    "@raycast/api": "1.27.1"
   },
   "devDependencies": {
     "@types/node": "~16.10.0",
