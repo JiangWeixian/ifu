@@ -23,6 +23,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
+    "./logseq": {
+      "require": "./dist/logseq.cjs",
+      "types": "./dist/logseq.d.ts",
+      "import": "./dist/logseq.mjs"
+    },
     "./lunar": {
       "require": "./dist/lunar.cjs",
       "types": "./dist/lunar.d.ts",
@@ -41,6 +46,9 @@
   },
   "typesVersions": {
     "*": {
+      "logseq": [
+        "dist/logseq.d.ts"
+      ],
       "lunar": [
         "dist/lunar.d.ts"
       ],
@@ -58,7 +66,7 @@
   "scripts": {
     "build": "rimraf cjs esm && rollup -c --silent",
     "dev": "rollup -c -w --silent",
-    "test": "echo test",
+    "test": "vitest",
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
@@ -69,6 +77,8 @@
   },
   "devDependencies": {
     "@changesets/cli": "^2.17.0",
+    "@types/lodash-es": "^4.17.5",
+    "lodash-es": "4.17.21",
     "prettier": "2.4.1",
     "rimraf": "3.0.2",
     "rollup": "2.58.0",

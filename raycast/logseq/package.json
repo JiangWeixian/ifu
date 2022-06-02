@@ -1,16 +1,19 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "lunar",
-  "title": "lunar",
-  "description": "Display lunar calendar",
+  "name": "logseq",
+  "title": "logseq",
+  "description": "logseq snippets",
   "icon": "command-icon.png",
   "author": "JiangWeixian",
+  "categories": [
+    "Developer Tools"
+  ],
   "license": "MIT",
   "commands": [
     {
       "name": "index",
-      "title": "Display lunar | 农历",
-      "description": "Display lunar calendar",
+      "title": "Logseq snippets",
+      "description": "Useful logseq snippets",
       "mode": "view"
     }
   ],
@@ -19,8 +22,6 @@
     "@raycast/api": "^1.27.1"
   },
   "devDependencies": {
-    "lodash-es": "4.17.21",
-    "@types/lodash-es": "^4.17.5",
     "@types/node": "~16.10.0",
     "@types/react": "^17.0.28",
     "@typescript-eslint/eslint-plugin": "^5.0.0",
@@ -28,8 +29,7 @@
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.5.1",
-    "react-devtools": "^4.19.2",
-    "typescript": "^4.4.3"
+    "typescript": "4.4.3"
   },
   "scripts": {
     "build": "ray build -e dist",
