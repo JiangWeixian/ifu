@@ -3,11 +3,14 @@
   "version": "",
   "scripts": {
     "lint:fix": "eslint . --fix",
-    "build": "pnpm build -r",
-    "ci:publish": "pnpm run build && pnpm changeset publish",
+    "build:packages": "pnpm --filter={./packages/**} run build",
+    "build:shared": "pnpm --filter=./shared run build",
+    "build:raycast": "pnpm --filter={./raycast/**} run build",
+    "build": "pnpm run build -r",
+    "ci:publish": "pnpm run build:shared && pnpm run build:packages && pnpm changeset publish",
     "ci:version": "pnpm changeset version",
     "ci:snapshot": "pnpm changeset version --snapshot beta",
-    "ci:prerelease": "pnpm run build && pnpm changeset publish --tag beta",
+    "ci:prerelease": "pnpm run build:shared && pnpm run build:packages && pnpm changeset publish --tag beta",
     "prepare": "husky install"
   },
   "lint-staged": {

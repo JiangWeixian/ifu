@@ -21,7 +21,5 @@
 - ESM_OPTIONS='{"await":true}' node --require esm "$@"
 ```
 
-`pnpm@6`
-
 - [alfy](https://github.com/sindresorhus/alfy)
 - [Script Filter JSON Format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/)
