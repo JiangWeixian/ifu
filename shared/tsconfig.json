@@ -1,25 +1,4 @@
 {
-  "compilerOptions": {
-    "target": "ES2017",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "importHelpers": true,
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "experimentalDecorators": true,
-    "declaration": true,
-    "outDir": "dist",
-    "strict": true,
-    "resolveJsonModule": true,
-    "noImplicitReturns": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
-  },
-  "exclude": ["node_modules", "test"]
+  "extends": "../tsconfig.json",
+  "exclude": ["node_modules", "test", "dist"]
 }
