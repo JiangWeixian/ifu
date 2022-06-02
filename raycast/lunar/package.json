@@ -16,10 +16,10 @@
   ],
   "dependencies": {
     "@ifu/shared": "workspace:^0.0.0",
-    "@raycast/api": "^1.27.1",
-    "lodash-es": "^4.17.21"
+    "@raycast/api": "^1.27.1"
   },
   "devDependencies": {
+    "lodash-es": "4.17.21",
     "@types/lodash-es": "^4.17.5",
     "@types/node": "~16.10.0",
     "@types/react": "^17.0.28",
