@@ -12,11 +12,11 @@ const tpls = {
 }
 
 export const queryStatic7dRanges = () => {
-  const list = []
+  const list: string[] = []
   for (let i = 0; i < 7; i++) {
     const end = dayjs().subtract(i, 'day').format('MMMM Do, YYYY')
     const start = dayjs()
-      .subtract(7 + i, 'day')
+      .subtract(5 + i, 'day')
       .format('MMMM Do, YYYY')
     list.push(tpls.queryStaticRange({ start, end }))
   }
